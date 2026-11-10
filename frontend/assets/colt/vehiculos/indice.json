@@ -1,0 +1,101 @@
+[
+  {
+    "clave": "tucson-lm",
+    "marca": "Hyundai",
+    "modelo": "Tucson",
+    "desde": 2009,
+    "hasta": 2013,
+    "imagen": "vehiculos/tucson-lm.jpg",
+    "credito": "Foto: U.S. National Highway Traffic Safety Administration · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "tucson-jm",
+    "marca": "Hyundai",
+    "modelo": "Tucson",
+    "desde": 2004,
+    "hasta": 2009,
+    "imagen": "vehiculos/tucson-jm.jpg",
+    "credito": "Foto: OSX · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "santa-fe-cm",
+    "marca": "Hyundai",
+    "modelo": "Santa Fe",
+    "desde": 2006,
+    "hasta": 2012,
+    "imagen": "vehiculos/santa-fe-cm.jpg",
+    "credito": "Foto: OSX · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "accent-mc",
+    "marca": "Hyundai",
+    "modelo": "Accent",
+    "desde": 2006,
+    "hasta": 2011,
+    "imagen": "vehiculos/accent-mc.jpg",
+    "credito": "Foto: IFCAR · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "lancer-cs",
+    "marca": "Mitsubishi",
+    "modelo": "Lancer",
+    "desde": 2000,
+    "hasta": 2007,
+    "imagen": "vehiculos/lancer-cs.jpg",
+    "credito": "Foto: OSX · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "lancer-cy",
+    "marca": "Mitsubishi",
+    "modelo": "Lancer",
+    "desde": 2008,
+    "hasta": 2017,
+    "imagen": "vehiculos/lancer-cy.jpg",
+    "credito": "Foto: Mpd0043 at English Wikipedia · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "galant-ea",
+    "marca": "Mitsubishi",
+    "modelo": "Galant",
+    "desde": 1997,
+    "hasta": 2003,
+    "imagen": "vehiculos/galant-ea.jpg",
+    "credito": "Foto: Cutlass · CC0 · Wikimedia Commons"
+  },
+  {
+    "clave": "l200-k70",
+    "marca": "Mitsubishi",
+    "modelo": "L200",
+    "desde": 1996,
+    "hasta": 2005,
+    "imagen": "vehiculos/l200-k70.jpg",
+    "credito": "Foto: Ethan Llamas · CC BY-SA 4.0 · Wikimedia Commons"
+  },
+  {
+    "clave": "montero-v60",
+    "marca": "Mitsubishi",
+    "modelo": "Montero",
+    "desde": 2000,
+    "hasta": 2006,
+    "imagen": "vehiculos/montero-v60.jpg",
+    "credito": "Foto: RL GNZLZ · CC BY-SA 4.0 · Wikimedia Commons"
+  },
+  {
+    "clave": "montero-sport-k90",
+    "marca": "Mitsubishi",
+    "modelo": "Montero Sport",
+    "desde": 1996,
+    "hasta": 2008,
+    "imagen": "vehiculos/montero-sport-k90.jpg",
+    "credito": "Foto: Bull-Doser · Public domain · Wikimedia Commons"
+  },
+  {
+    "clave": "focus-mk3",
+    "marca": "Ford",
+    "modelo": "Focus",
+    "desde": 2011,
+    "hasta": 2018,
+    "imagen": "vehiculos/focus-mk3.jpg",
+    "credito": "Foto: IFCAR · Public domain · Wikimedia Commons"
+  }
+]

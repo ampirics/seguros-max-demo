@@ -1,0 +1,3285 @@
+{
+ "fuentes": [
+  {
+   "clave": "simulada",
+   "nombre": "Catálogo de la tienda",
+   "descripcion": "Piezas del catálogo de la tienda para Tucson 2012, Lancer 2005 y L200 2003.",
+   "necesita_documento": false,
+   "disponible": true,
+   "motivo": null,
+   "vehiculos": [
+    {
+     "marca": "Hyundai",
+     "modelo": "Tucson",
+     "anio_desde": 2009,
+     "anio_hasta": 2013
+    },
+    {
+     "marca": "Mitsubishi",
+     "modelo": "L200",
+     "anio_desde": 1997,
+     "anio_hasta": 2005
+    },
+    {
+     "marca": "Mitsubishi",
+     "modelo": "Lancer",
+     "anio_desde": 2001,
+     "anio_hasta": 2007
+    }
+   ],
+   "documentos": []
+  },
+  {
+   "clave": "pdf",
+   "nombre": "Boletín o manual en PDF",
+   "descripcion": "Un documento público que descargó una persona, con la página de cada vehículo.",
+   "necesita_documento": true,
+   "disponible": true,
+   "motivo": null,
+   "vehiculos": [],
+   "documentos": [
+    {
+     "id": "tsb-26-01-033h",
+     "titulo": "TSB 26-01-033H",
+     "listo": true,
+     "motivo": null,
+     "vehiculos": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "Theta II 2.4L MPI",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "clave": "proveedor",
+   "nombre": "Archivo de un proveedor",
+   "descripcion": "El Excel o CSV de aplicaciones que manda un proveedor, con su permiso.",
+   "necesita_documento": true,
+   "disponible": true,
+   "motivo": null,
+   "vehiculos": [],
+   "documentos": [
+    {
+     "id": "ejemplo",
+     "titulo": "Ejemplo",
+     "listo": true,
+     "motivo": null,
+     "vehiculos": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "ix35",
+       "anio_desde": 2010,
+       "anio_hasta": 2015
+      },
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005
+      },
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "lotes": {
+  "simulada||Hyundai|Tucson": {
+   "fuente": {
+    "nombre": "simulada",
+    "version": "2026-10-07",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": null,
+    "licencia": "datos de prueba, sin valor real"
+   },
+   "articulos": [
+    {
+     "articleId": "simulada:e129b8b3f3be",
+     "articleNo": "54651-2S000",
+     "supplierName": "PARTS MALL",
+     "articleProductName": "Amortiguador Delantero (LH)",
+     "oemNumbers": [
+      {
+       "oemNumber": "54651-2S000"
+      }
+     ],
+     "s3image": "assets/colt/productos/2tu_2011-13_54651-2s000_pmc_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/2tu_2011-13_54651-2s000_pmc_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "numero_fabricante": "PJA-FL022",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (LH) 54651-2S000 - PARTS MALL",
+      "numero": "PJA-FL022",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-LH-54651-2S000--PARTS-MALL_p_620.html"
+     }
+    },
+    {
+     "articleId": "simulada:ca0cb877a141",
+     "articleNo": "54661-2S000",
+     "supplierName": "PARTS MALL",
+     "articleProductName": "Amortiguador Delantero (RH)",
+     "oemNumbers": [
+      {
+       "oemNumber": "54661-2S000"
+      }
+     ],
+     "s3image": "assets/colt/productos/2tu_2011-13_54661-2s000_pmc_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/2tu_2011-13_54661-2s000_pmc_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera derecha",
+     "numero_fabricante": "PJA-FR022",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (RH) 54661-2S000 - PARTS MALL",
+      "numero": "PJA-FR022",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-RH-54661-2S000--PARTS-MALL_p_621.html"
+     }
+    },
+    {
+     "articleId": "simulada:9bd867d16748",
+     "articleNo": "24460-25001",
+     "supplierName": "HYUNDAI",
+     "articleProductName": "Tensor Cadena Lubricación",
+     "oemNumbers": [
+      {
+       "oemNumber": "24460-25001"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "tensor",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Tensor Cadena Lubricación 24460-25001 - HYUNDAI",
+      "numero": "24460-25001",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Tensor-Cadena-Lubricacin-24460-25001--HYUNDAI_p_661.html"
+     }
+    },
+    {
+     "articleId": "simulada:0ff36783d76a",
+     "articleNo": "MTP-24",
+     "supplierName": "INTERSTATE",
+     "articleProductName": "Bateria Mega Tron Plus",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "batería",
+     "sistema": "electricidad",
+     "posicion": null,
+     "numero_fabricante": "MTP-24",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bateria Mega Tron Plus MTP-24 INTERSTATE",
+      "numero": "MTP-24",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bateria-Mega-Tron-Plus-MTP-24-INTERSTATE_p_10.html"
+     }
+    },
+    {
+     "articleId": "simulada:52aacb969036",
+     "articleNo": "MTP-24F",
+     "supplierName": "INTERSTATE",
+     "articleProductName": "Bateria Mega Tron Plus",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "batería",
+     "sistema": "electricidad",
+     "posicion": null,
+     "numero_fabricante": "MTP-24F",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bateria Mega Tron Plus MTP-24F INTERSTATE",
+      "numero": "MTP-24F",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bateria-Mega-Tron-Plus-MTP-24F-INTERSTATE_p_11.html"
+     }
+    },
+    {
+     "articleId": "simulada:8d6f50939077",
+     "articleNo": "MTP-27",
+     "supplierName": "INTERSTATE",
+     "articleProductName": "Bateria Mega Tron Plus",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "batería",
+     "sistema": "electricidad",
+     "posicion": null,
+     "numero_fabricante": "MTP-27",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bateria Mega Tron Plus MTP-27 INTERSTATE",
+      "numero": "MTP-27",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bateria-Mega-Tron-Plus-MTP-27-INTERSTATE_p_12.html"
+     }
+    },
+    {
+     "articleId": "simulada:3527007708e6",
+     "articleNo": "MTP-27F",
+     "supplierName": "INTERSTATE",
+     "articleProductName": "Bateria Mega Tron Plus",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "batería",
+     "sistema": "electricidad",
+     "posicion": null,
+     "numero_fabricante": "MTP-27F",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bateria Mega Tron Plus MTP-27F INTERSTATE",
+      "numero": "MTP-27F",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bateria-Mega-Tron-Plus-MTP-27F-INTERSTATE_p_13.html"
+     }
+    },
+    {
+     "articleId": "simulada:c29117c8bd56",
+     "articleNo": "BKR5EGP-7090",
+     "supplierName": "NGK",
+     "articleProductName": "Bujia G Power",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "BKR5EGP-7090",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bujia NGK - G Power BKR5EGP 7090",
+      "numero": "BKR5EGP-7090",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bujia-NGK--G-Power-BKR5EGP-7090_p_518.html"
+     }
+    },
+    {
+     "articleId": "simulada:340de82fbeea",
+     "articleNo": "BKR5EP-11-3440",
+     "supplierName": "NGK",
+     "articleProductName": "Bujia Laser Platinum",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "BKR5EP-11-3440",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bujia NGK - Laser Platinum BKR5EP-11 3440",
+      "numero": "BKR5EP-11-3440",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bujia-NGK--Laser-Platinum-BKR5EP-11-3440_p_519.html"
+     }
+    },
+    {
+     "articleId": "simulada:29f9b2b75235",
+     "articleNo": "BKR5E-11-6953",
+     "supplierName": "NGK",
+     "articleProductName": "Bujia V Power",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "BKR5E-11-6953",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bujia NGK - V Power BKR5E-11 6953",
+      "numero": "BKR5E-11-6953",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bujia-NGK--V-Power-BKR5E-11-6953_p_520.html"
+     }
+    },
+    {
+     "articleId": "simulada:ad5d8347008f",
+     "articleNo": "BKR5EIX-11-5464",
+     "supplierName": "NGK",
+     "articleProductName": "Bujia Iridium IX",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "BKR5EIX-11-5464",
+     "compatibilidad": [],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bujia NGK - Iridium IX BKR5EIX-11 5464",
+      "numero": "BKR5EIX-11-5464",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bujia-NGK--Iridium-IX-BKR5EIX-11-5464_p_521.html"
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 11,
+    "nuevas_para_la_tienda": 0,
+    "ya_en_catalogo": 11,
+    "por_sistema": {
+     "tren_delantero": 2,
+     "motor": 5,
+     "electricidad": 4
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "simulada||Mitsubishi|Lancer": {
+   "fuente": {
+    "nombre": "simulada",
+    "version": "2026-10-07",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": null,
+    "licencia": "datos de prueba, sin valor real"
+   },
+   "articulos": [
+    {
+     "articleId": "simulada:4a4396d0fec6",
+     "articleNo": "SP1255",
+     "supplierName": "HI-Q",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l_2001-07_sp1255_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_sp1255_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "SP1255",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras SP1255 - HIQ",
+      "numero": "SP1255",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-SP1255--HIQ_p_150.html"
+     }
+    },
+    {
+     "articleId": "simulada:76fc10fccfc2",
+     "articleNo": "MD365102",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Cable de Bujia",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD365102"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "cable de bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Cable de Bujia MD365102 - MITSUBISHI",
+      "numero": "MD365102",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Cable-de-Bujia-MD365102--MITSUBISHI_p_151.html"
+     }
+    },
+    {
+     "articleId": "simulada:92cfe7d99589",
+     "articleNo": "MZ690626",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Correa de Distribución",
+     "oemNumbers": [
+      {
+       "oemNumber": "MZ690626"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Distribución MZ690626 - MITSUBISHI",
+      "numero": "MZ690626",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Distribucin-MZ690626--MITSUBISHI_p_152.html"
+     }
+    },
+    {
+     "articleId": "simulada:a3fdfd46c5cf",
+     "articleNo": "5PK0865",
+     "supplierName": "DAYCO",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "5PK0865",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 5PK0865 DAYCO",
+      "numero": "5PK0865",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-5PK0865-DAYCO_p_153.html"
+     }
+    },
+    {
+     "articleId": "simulada:1a1b22d72801",
+     "articleNo": "5PK0865",
+     "supplierName": "BANDO",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "5PK0865",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 5PK0865 BANDO",
+      "numero": "5PK0865",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-5PK0865-BANDO_p_154.html"
+     }
+    },
+    {
+     "articleId": "simulada:3ab4e5e0acb5",
+     "articleNo": "MZ690185",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [
+      {
+       "oemNumber": "MZ690185"
+      }
+     ],
+     "s3image": "assets/colt/productos/1l_2001-07_mz690185_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_mz690185_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras MZ690185 - MITSUBISHI",
+      "numero": "MZ690185",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-MZ690185--MITSUBISHI_p_212.html"
+     }
+    },
+    {
+     "articleId": "simulada:f487cd97fad5",
+     "articleNo": "MD365609",
+     "supplierName": "TJB",
+     "articleProductName": "Tensor Mecánico",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD365609"
+      }
+     ],
+     "s3image": "assets/colt/productos/1l_2001-07_md356509_tjb_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_md356509_tjb_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "tensor",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Tensor Mecánico MD365609 - TJB",
+      "numero": "MD365609",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Tensor-Mecnico-MD365609--TJB_p_245.html"
+     }
+    },
+    {
+     "articleId": "simulada:fd456e6a38d9",
+     "articleNo": "MD186376",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Correa de Distribución",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD186376"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "2.0 Litros - 4G94",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Distribución MD186376 - MITSUBISHI",
+      "numero": "MD186376",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Distribucin-MD186376--MITSUBISHI_p_291.html"
+     }
+    },
+    {
+     "articleId": "simulada:93d433a65f6a",
+     "articleNo": "333381",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero (LH/RH)",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l_2001-07_mr519614_kyb_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_mr519614_kyb_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "333381",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (LH/RH) 333381 - KAYABA",
+      "numero": "333381",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-LHRH-333381--KAYABA_p_581.html"
+     }
+    },
+    {
+     "articleId": "simulada:d2894df6989f",
+     "articleNo": "334420",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero (LH/RH)",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l_2001-07_mr589639_kyb_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_mr589639_kyb_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "334420",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (LH/RH) 334420 - KAYABA",
+      "numero": "334420",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-LHRH-334420--KAYABA_p_582.html"
+     }
+    },
+    {
+     "articleId": "simulada:04167193b4e8",
+     "articleNo": "333382",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero (LH/RH)",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l_2001-07_mr491430_kyb_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l_2001-07_mr491430_kyb_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "333382",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3 Litros - 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (LH/RH) 333382 - KAYABA",
+      "numero": "333382",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-LHRH-333382--KAYABA_p_583.html"
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 11,
+    "nuevas_para_la_tienda": 0,
+    "ya_en_catalogo": 11,
+    "por_sistema": {
+     "tren_delantero": 5,
+     "motor": 6
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "simulada||Mitsubishi|L200": {
+   "fuente": {
+    "nombre": "simulada",
+    "version": "2026-10-07",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": null,
+    "licencia": "datos de prueba, sin valor real"
+   },
+   "articulos": [
+    {
+     "articleId": "simulada:e9a682cf80c3",
+     "articleNo": "MD050130",
+     "supplierName": "SUN",
+     "articleProductName": "Correa de Distribución",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD050130"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Distribución MD050130 - SUN",
+      "numero": "MD050130",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Distribucin-MD050130--SUN_p_98.html"
+     }
+    },
+    {
+     "articleId": "simulada:a97745b3409b",
+     "articleNo": "D6110",
+     "supplierName": "KASHIYAMA",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l2_1997-05_d6110_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_d6110_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "D6110",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras D6110 - KASHIYAMA",
+      "numero": "D6110",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-D6110--KASHIYAMA_p_114.html"
+     }
+    },
+    {
+     "articleId": "simulada:6e9e0b04a56c",
+     "articleNo": "SP1256",
+     "supplierName": "HI-Q",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l2_1997-05_sp1256_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_sp1256_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "SP1256",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras SP1256 - HiQ",
+      "numero": "SP1256",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-SP1256--HiQ_p_115.html"
+     }
+    },
+    {
+     "articleId": "simulada:eb5f3d241bb9",
+     "articleNo": "D6123",
+     "supplierName": "KASHIYAMA",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l2_1997-05_d6123_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_d6123_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "D6123",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras D6123 - KASHIYAMA",
+      "numero": "D6123",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-D6123--KASHIYAMA_p_116.html"
+     }
+    },
+    {
+     "articleId": "simulada:d86687ce2ade",
+     "articleNo": "K6718",
+     "supplierName": "MOUNTAIN",
+     "articleProductName": "Bandas de Freno Traseras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l2_1997-05_k6718_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_k6718_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_trasero",
+     "posicion": "trasera",
+     "numero_fabricante": "K6718",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Traseras K6718 - MOUNTAIN",
+      "numero": "K6718",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Traseras-K6718--MOUNTAIN_p_117.html"
+     }
+    },
+    {
+     "articleId": "simulada:1d00d060c0cc",
+     "articleNo": "MD334021",
+     "supplierName": "SEIWA",
+     "articleProductName": "Cable de Bujia",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD334021"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "cable de bujía",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Cable de Bujia MD334021 - SEIWA",
+      "numero": "MD334021",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Cable-de-Bujia-MD334021--SEIWA_p_118.html"
+     }
+    },
+    {
+     "articleId": "simulada:19e51d9cb03a",
+     "articleNo": "17360",
+     "supplierName": "GATES",
+     "articleProductName": "Correa Dentada",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "17360",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa Dentada 17360 GATES",
+      "numero": "17360",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-Dentada-17360-GATES_p_119.html"
+     }
+    },
+    {
+     "articleId": "simulada:2f28327ed0f2",
+     "articleNo": "4PK0990",
+     "supplierName": "SUN",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK0990",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK0990 SUN",
+      "numero": "4PK0990",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK0990-SUN_p_120.html"
+     }
+    },
+    {
+     "articleId": "simulada:2e3cdd1b9499",
+     "articleNo": "4PK0990",
+     "supplierName": "DAYCO",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK0990",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK0990 DAYCO",
+      "numero": "4PK0990",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK0990-DAYCO_p_121.html"
+     }
+    },
+    {
+     "articleId": "simulada:c044cbaeae5a",
+     "articleNo": "15420",
+     "supplierName": "GATES",
+     "articleProductName": "Correa Dentada",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "15420",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa Dentada 15420 GATES",
+      "numero": "15420",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-Dentada-15420-GATES_p_122.html"
+     }
+    },
+    {
+     "articleId": "simulada:987677bfb9c1",
+     "articleNo": "15420",
+     "supplierName": "DAYCO",
+     "articleProductName": "Correa Dentada",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "15420",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa Dentada 15420 DAYCO",
+      "numero": "15420",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-Dentada-15420-DAYCO_p_123.html"
+     }
+    },
+    {
+     "articleId": "simulada:18304ff9921a",
+     "articleNo": "4PK1050",
+     "supplierName": "BANDO",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK1050",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK1050 BANDO",
+      "numero": "4PK1050",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK1050-BANDO_p_124.html"
+     }
+    },
+    {
+     "articleId": "simulada:c1982cb30230",
+     "articleNo": "4PK1120",
+     "supplierName": "DAYCO",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK1120",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK1120 DAYCO",
+      "numero": "4PK1120",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK1120-DAYCO_p_125.html"
+     }
+    },
+    {
+     "articleId": "simulada:047257dcaf07",
+     "articleNo": "MD182295",
+     "supplierName": "SUN",
+     "articleProductName": "Correa de Lubricación",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD182295"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de lubricación",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Lubricación MD182295 - SUN",
+      "numero": "MD182295",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Lubricacin-MD182295--SUN_p_126.html"
+     }
+    },
+    {
+     "articleId": "simulada:670a9da1b5ec",
+     "articleNo": "MZ690610",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Correa de Lubricación",
+     "oemNumbers": [
+      {
+       "oemNumber": "MZ690610"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de lubricación",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Lubricación MZ690610 - MITSUBISHI",
+      "numero": "MZ690610",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Lubricacin-MZ690610--MITSUBISHI_p_127.html"
+     }
+    },
+    {
+     "articleId": "simulada:09b954cfaf9e",
+     "articleNo": "MD620563",
+     "supplierName": "SAKURA",
+     "articleProductName": "Filtro de Aire",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD620563"
+      }
+     ],
+     "s3image": "assets/colt/productos/1l2_1997-05_md620563_sak_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_md620563_sak_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "filtro de aire",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Filtro de Aire MD620563 - SAKURA",
+      "numero": "MD620563",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Filtro-de-Aire-MD620563--SAKURA_p_128.html"
+     }
+    },
+    {
+     "articleId": "simulada:97c0083cde29",
+     "articleNo": "MD620563",
+     "supplierName": "WELLPART",
+     "articleProductName": "Filtro de Aire",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD620563"
+      }
+     ],
+     "s3image": "assets/colt/productos/1l2_1997-05_md620563_2.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_md620563_2.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "filtro de aire",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Filtro de Aire MD620563 - WELLPART",
+      "numero": "MD620563",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Filtro-de-Aire-MD620563--WELLPART_p_129.html"
+     }
+    },
+    {
+     "articleId": "simulada:71c7e31e5c42",
+     "articleNo": "MD620472",
+     "supplierName": null,
+     "articleProductName": "Filtro de Aire",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD620472"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "filtro de aire",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Filtro de Aire MD620472 - Generico",
+      "numero": "MD620472",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Filtro-de-Aire-MD620472--Generico_p_130.html"
+     }
+    },
+    {
+     "articleId": "simulada:f18c3681ccd5",
+     "articleNo": "MD182295",
+     "supplierName": "GATES",
+     "articleProductName": "Correa de Lubricación",
+     "oemNumbers": [
+      {
+       "oemNumber": "MD182295"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de lubricación",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Lubricación MD182295 - GATES",
+      "numero": "MD182295",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Lubricacin-MD182295--GATES_p_200.html"
+     }
+    },
+    {
+     "articleId": "simulada:794eb8c6b2b5",
+     "articleNo": "MZ690016",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Bandas de Freno Delanteras",
+     "oemNumbers": [
+      {
+       "oemNumber": "MZ690016"
+      }
+     ],
+     "s3image": "assets/colt/productos/1l2_1997-05_mz690016_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1997-05_mz690016_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Delanteras MZ690016 - MITSUBISHI",
+      "numero": "MZ690016",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Delanteras-MZ690016--MITSUBISHI_p_207.html"
+     }
+    },
+    {
+     "articleId": "simulada:c6925416401d",
+     "articleNo": "4PK1120",
+     "supplierName": "SUN",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK1120",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK1120 SUN",
+      "numero": "4PK1120",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK1120-SUN_p_215.html"
+     }
+    },
+    {
+     "articleId": "simulada:fc3bdc34baff",
+     "articleNo": "4PK1050",
+     "supplierName": "MITSUBOSHI",
+     "articleProductName": "Correa de Canales",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de canales",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "4PK1050",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa de Canales 4PK1050 MITSUBOSHI",
+      "numero": "4PK1050",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-de-Canales-4PK1050-MITSUBOSHI_p_217.html"
+     }
+    },
+    {
+     "articleId": "simulada:7d3a2a71f406",
+     "articleNo": "MZ690289",
+     "supplierName": "MITSUBISHI",
+     "articleProductName": "Correa Dentada 17360",
+     "oemNumbers": [
+      {
+       "oemNumber": "MZ690289"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5 Litros - 4D56 [Diesel]",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Correa Dentada 17360 MITSUBISHI",
+      "numero": "MZ690289",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Correa-Dentada-17360-MITSUBISHI_p_230.html"
+     }
+    },
+    {
+     "articleId": "simulada:7b28fbe64a55",
+     "articleNo": "K6718",
+     "supplierName": "TOP",
+     "articleProductName": "Bandas de Freno Traseras",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1ms_1997-07_k6718_top_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1ms_1997-07_k6718_top_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_trasero",
+     "posicion": "trasera",
+     "numero_fabricante": "K6718",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Bandas de Freno Traseras K6718 - TOP",
+      "numero": "K6718",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Bandas-de-Freno-Traseras-K6718--TOP_p_279.html"
+     }
+    },
+    {
+     "articleId": "simulada:3d22302a2216",
+     "articleNo": "444150",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero (LH/RH)",
+     "oemNumbers": [],
+     "s3image": "assets/colt/productos/1l2_1987-96_mr151227_kyb_1.jpg",
+     "foto_referencia": {
+      "url": "assets/colt/productos/1l2_1987-96_mr151227_kyb_1.jpg",
+      "origen": "Catálogo de la tienda (casadelcolt.com)",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": true,
+      "pagina": null
+     },
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "444150",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0 Litros - 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "simulada",
+      "version": "2026-10-07",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "datos de prueba, sin valor real"
+     },
+     "original": {
+      "nombre": "Amortiguador Delantero (LH/RH) 444150 - KAYABA",
+      "numero": "444150",
+      "texto": null,
+      "url": "https://www.casadelcolt.com/Amortiguador-Delantero-LHRH-444150--KAYABA_p_568.html"
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 25,
+    "nuevas_para_la_tienda": 0,
+    "ya_en_catalogo": 25,
+    "por_sistema": {
+     "motor": 18,
+     "tren_delantero": 5,
+     "tren_trasero": 2
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "proveedor|ejemplo|Hyundai|Tucson": {
+   "fuente": {
+    "nombre": "proveedor-ejemplo",
+    "version": "2026-10",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+    "licencia": "archivo de un proveedor de la tienda, con su permiso"
+   },
+   "articulos": [
+    {
+     "articleId": "proveedor-ejemplo:f84a5599e5af",
+     "articleNo": "54651-2S000",
+     "supplierName": "PARTS MALL",
+     "articleProductName": "Amortiguador Delantero (LH)",
+     "oemNumbers": [
+      {
+       "oemNumber": "54651-2S000"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "numero_fabricante": "PJA-FL022",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0L",
+       "mercado": null,
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "ix35",
+       "anio_desde": 2010,
+       "anio_hasta": 2015,
+       "motor": "2.0L",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Front Left Shock Absorber",
+      "numero": "PJA-FL022",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "proveedor-ejemplo:c5de7520f1cd",
+     "articleNo": "EJEMPLO-0001",
+     "supplierName": "EJEMPLO",
+     "articleProductName": "Bandas de Freno Traseras",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": {
+      "url": "https://ejemplo.test/fotos/ejemplo-0001.jpg",
+      "origen": "Proveedor Ejemplo",
+      "autor": null,
+      "licencia": null,
+      "puede_mostrarse": false,
+      "pagina": null
+     },
+     "familia": "bandas de freno",
+     "sistema": "tren_trasero",
+     "posicion": "trasera",
+     "numero_fabricante": "EJEMPLO-0001",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": null,
+       "mercado": null,
+       "notas": "Solo 4x4"
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Rear Brake Pads",
+      "numero": "EJEMPLO-0001",
+      "texto": null,
+      "url": null
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 2,
+    "nuevas_para_la_tienda": 1,
+    "ya_en_catalogo": 1,
+    "por_sistema": {
+     "tren_delantero": 1,
+     "tren_trasero": 1
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "proveedor|ejemplo|Hyundai|ix35": {
+   "fuente": {
+    "nombre": "proveedor-ejemplo",
+    "version": "2026-10",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+    "licencia": "archivo de un proveedor de la tienda, con su permiso"
+   },
+   "articulos": [
+    {
+     "articleId": "proveedor-ejemplo:f84a5599e5af",
+     "articleNo": "54651-2S000",
+     "supplierName": "PARTS MALL",
+     "articleProductName": "Amortiguador Delantero (LH)",
+     "oemNumbers": [
+      {
+       "oemNumber": "54651-2S000"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "numero_fabricante": "PJA-FL022",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0L",
+       "mercado": null,
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "ix35",
+       "anio_desde": 2010,
+       "anio_hasta": 2015,
+       "motor": "2.0L",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Front Left Shock Absorber",
+      "numero": "PJA-FL022",
+      "texto": null,
+      "url": null
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 1,
+    "nuevas_para_la_tienda": 0,
+    "ya_en_catalogo": 1,
+    "por_sistema": {
+     "tren_delantero": 1
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "proveedor|ejemplo|Mitsubishi|L200": {
+   "fuente": {
+    "nombre": "proveedor-ejemplo",
+    "version": "2026-10",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+    "licencia": "archivo de un proveedor de la tienda, con su permiso"
+   },
+   "articulos": [
+    {
+     "articleId": "proveedor-ejemplo:8873a40333cf",
+     "articleNo": "EJEMPLO-OE-1",
+     "supplierName": "EJEMPLO",
+     "articleProductName": "Correa de Distribución",
+     "oemNumbers": [
+      {
+       "oemNumber": "EJEMPLO-OE-1"
+      },
+      {
+       "oemNumber": "EJEMPLO-OE-2"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "correa de distribución",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": "EJEMPLO-0002",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.5L 4D56 Diesel",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Timing Belt",
+      "numero": "EJEMPLO-0002",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "proveedor-ejemplo:3de8352375ab",
+     "articleNo": "444150",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "444150",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "L200",
+       "anio_desde": 1997,
+       "anio_hasta": 2005,
+       "motor": "2.0L 4G63",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Front Shock Absorber",
+      "numero": "444150",
+      "texto": null,
+      "url": null
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 2,
+    "nuevas_para_la_tienda": 1,
+    "ya_en_catalogo": 1,
+    "por_sistema": {
+     "motor": 1,
+     "tren_delantero": 1
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "proveedor|ejemplo|Mitsubishi|Lancer": {
+   "fuente": {
+    "nombre": "proveedor-ejemplo",
+    "version": "2026-10",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+    "licencia": "archivo de un proveedor de la tienda, con su permiso"
+   },
+   "articulos": [
+    {
+     "articleId": "proveedor-ejemplo:be23d7dd1cea",
+     "articleNo": "333381",
+     "supplierName": "KAYABA",
+     "articleProductName": "Amortiguador Delantero",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera",
+     "numero_fabricante": "333381",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": "1.3L 4G13",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": true,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Front Shock Absorber",
+      "numero": "333381",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "proveedor-ejemplo:238aff379032",
+     "articleNo": "EJEMPLO-0003",
+     "supplierName": "EJEMPLO",
+     "articleProductName": "Strut Mount",
+     "oemNumbers": [],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": null,
+     "sistema": "otros",
+     "posicion": "delantera",
+     "numero_fabricante": "EJEMPLO-0003",
+     "compatibilidad": [
+      {
+       "marca": "Mitsubishi",
+       "modelo": "Lancer",
+       "anio_desde": 2001,
+       "anio_hasta": 2007,
+       "motor": null,
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": null,
+     "fuente": {
+      "nombre": "proveedor-ejemplo",
+      "version": "2026-10",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": "Permiso de EJEMPLO: no es un permiso real del 07-10-2026: archivo inventado para probar el lector",
+      "licencia": "archivo de un proveedor de la tienda, con su permiso"
+     },
+     "original": {
+      "nombre": "Strut Mount",
+      "numero": "EJEMPLO-0003",
+      "texto": null,
+      "url": null
+     }
+    }
+   ],
+   "resumen": {
+    "piezas": 2,
+    "nuevas_para_la_tienda": 1,
+    "ya_en_catalogo": 1,
+    "por_sistema": {
+     "tren_delantero": 1,
+     "otros": 1
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   },
+   "notas": []
+  },
+  "pdf|tsb-26-01-033h|Hyundai|Tucson": {
+   "fuente": {
+    "nombre": "pdf",
+    "version": "TSB 26-01-033H",
+    "url": null,
+    "consultado": "2026-10-09T10:00:00-04:00",
+    "terminos": null,
+    "licencia": "documento público de NHTSA"
+   },
+   "articulos": [
+    {
+     "articleId": "pdf:tsb-26-01-033h:21111-2G4S1QQH",
+     "articleNo": "21111-2G4S1QQH",
+     "supplierName": "HYUNDAI",
+     "articleProductName": "Kit de Servicio del Motor (ULEV)",
+     "oemNumbers": [
+      {
+       "oemNumber": "21111-2G4S1QQH"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "kit de motor",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "Theta II 2.4L MPI",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": {
+      "documento": "TSB 26-01-033H",
+      "pagina": 5,
+      "metodo": "texto",
+      "ocr": false,
+      "confianza_ocr": null
+     },
+     "fuente": {
+      "nombre": "pdf",
+      "version": "TSB 26-01-033H",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "documento público de NHTSA"
+     },
+     "original": {
+      "nombre": "Kit de Servicio del Motor (ULEV) 21111-2G4S1QQH",
+      "numero": "21111-2G4S1QQH",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "pdf:tsb-26-01-033h:21101-2G401QQH",
+     "articleNo": "21101-2G401QQH",
+     "supplierName": "HYUNDAI",
+     "articleProductName": "Motor 2.4L (Theta II)",
+     "oemNumbers": [
+      {
+       "oemNumber": "21101-2G401QQH"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "motor",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "Theta II 2.4L MPI",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": {
+      "documento": "TSB 26-01-033H",
+      "pagina": 5,
+      "metodo": "texto",
+      "ocr": false,
+      "confianza_ocr": null
+     },
+     "fuente": {
+      "nombre": "pdf",
+      "version": "TSB 26-01-033H",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "documento público de NHTSA"
+     },
+     "original": {
+      "nombre": "Motor 2.4L (Theta II) 21101-2G401QQH",
+      "numero": "21101-2G401QQH",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "pdf:tsb-26-01-033h:21111-2G4S2FFF",
+     "articleNo": "21111-2G4S2FFF",
+     "supplierName": "HYUNDAI",
+     "articleProductName": "Kit de Servicio del Motor (SULEV/PZEV)",
+     "oemNumbers": [
+      {
+       "oemNumber": "21111-2G4S2FFF"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "kit de motor",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "Theta II 2.4L MPI",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": {
+      "documento": "TSB 26-01-033H",
+      "pagina": 5,
+      "metodo": "texto",
+      "ocr": false,
+      "confianza_ocr": null
+     },
+     "fuente": {
+      "nombre": "pdf",
+      "version": "TSB 26-01-033H",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "documento público de NHTSA"
+     },
+     "original": {
+      "nombre": "Kit de Servicio del Motor (SULEV/PZEV) 21111-2G4S2FFF",
+      "numero": "21111-2G4S2FFF",
+      "texto": null,
+      "url": null
+     }
+    },
+    {
+     "articleId": "pdf:tsb-26-01-033h:39250-2G100",
+     "articleNo": "39250-2G100",
+     "supplierName": "HYUNDAI",
+     "articleProductName": "Sensor de Detonación",
+     "oemNumbers": [
+      {
+       "oemNumber": "39250-2G100"
+      }
+     ],
+     "s3image": null,
+     "foto_referencia": null,
+     "familia": "sensor de detonación",
+     "sistema": "motor",
+     "posicion": null,
+     "numero_fabricante": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "Theta II 2.4L MPI",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "ya_en_catalogo": false,
+     "lectura": {
+      "documento": "TSB 26-01-033H",
+      "pagina": 5,
+      "metodo": "texto",
+      "ocr": false,
+      "confianza_ocr": null
+     },
+     "fuente": {
+      "nombre": "pdf",
+      "version": "TSB 26-01-033H",
+      "url": null,
+      "consultado": "2026-10-09T10:00:00-04:00",
+      "terminos": null,
+      "licencia": "documento público de NHTSA"
+     },
+     "original": {
+      "nombre": "Sensor de Detonación 39250-2G100",
+      "numero": "39250-2G100",
+      "texto": null,
+      "url": null
+     }
+    }
+   ],
+   "notas": [],
+   "resumen": {
+    "piezas": 4,
+    "nuevas_para_la_tienda": 4,
+    "ya_en_catalogo": 0,
+    "por_sistema": {
+     "motor": 4
+    },
+    "no_guardado": {},
+    "sin_numero": 0,
+    "unidas": 0,
+    "no_validos": 0,
+    "avisos": []
+   }
+  }
+ },
+ "proveedores": {
+  "amortiguador delantero": [
+   {
+    "id": "prov-a:546512S000:PARTSMALL",
+    "tipo": "proveedor",
+    "titulo": "Amortiguador Delantero (LH) 54651-2S000 - PARTS MALL",
+    "fuente": "Proveedor A (simulado)",
+    "condicion": "nueva",
+    "precio": 2023.05,
+    "moneda": "DOP",
+    "origen": "Santo Domingo",
+    "dias_estimados": 1,
+    "url": "",
+    "imagen": "/colt/productos/2tu_2011-13_54651-2s000_pmc_1.jpg",
+    "proveedor": {
+     "id": "prov-a",
+     "nombre": "Proveedor A (simulado)",
+     "origen": "Santo Domingo"
+    },
+    "disponibles": 11,
+    "agotado": false,
+    "pieza": {
+     "numero": "54651-2S000",
+     "numero_fabricante": "PJA-FL022",
+     "marca_pieza": "PARTS MALL",
+     "nombre": "Amortiguador Delantero (LH)",
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "Catálogo de la tienda"
+    },
+    "ya_en_catalogo": {
+     "sku": "IM100889"
+    },
+    "simulado": true
+   },
+   {
+    "id": "prov-b:546612S000:PARTSMALL",
+    "tipo": "proveedor",
+    "titulo": "Amortiguador Delantero (RH) 54661-2S000 - PARTS MALL",
+    "fuente": "Proveedor B (simulado)",
+    "condicion": "nueva",
+    "precio": 20.25,
+    "moneda": "USD",
+    "origen": "Miami, EE. UU.",
+    "dias_estimados": 6,
+    "url": "",
+    "imagen": "/colt/productos/2tu_2011-13_54661-2s000_pmc_1.jpg",
+    "proveedor": {
+     "id": "prov-b",
+     "nombre": "Proveedor B (simulado)",
+     "origen": "Miami, EE. UU."
+    },
+    "disponibles": 2,
+    "agotado": false,
+    "pieza": {
+     "numero": "54661-2S000",
+     "numero_fabricante": "PJA-FR022",
+     "marca_pieza": "PARTS MALL",
+     "nombre": "Amortiguador Delantero (RH)",
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera derecha",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "Catálogo de la tienda"
+    },
+    "ya_en_catalogo": {
+     "sku": "IM100879"
+    },
+    "simulado": true
+   },
+   {
+    "id": "prov-c:546612S000:PARTSMALL",
+    "tipo": "proveedor",
+    "titulo": "Amortiguador Delantero (RH) 54661-2S000 - PARTS MALL",
+    "fuente": "Proveedor C (simulado)",
+    "condicion": "nueva",
+    "precio": 22.13,
+    "moneda": "USD",
+    "origen": "Ciudad de Panamá",
+    "dias_estimados": 8,
+    "url": "",
+    "imagen": "/colt/productos/2tu_2011-13_54661-2s000_pmc_1.jpg",
+    "proveedor": {
+     "id": "prov-c",
+     "nombre": "Proveedor C (simulado)",
+     "origen": "Ciudad de Panamá"
+    },
+    "disponibles": 8,
+    "agotado": false,
+    "pieza": {
+     "numero": "54661-2S000",
+     "numero_fabricante": "PJA-FR022",
+     "marca_pieza": "PARTS MALL",
+     "nombre": "Amortiguador Delantero (RH)",
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera derecha",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "Catálogo de la tienda"
+    },
+    "ya_en_catalogo": {
+     "sku": "IM100879"
+    },
+    "simulado": true
+   },
+   {
+    "id": "prov-c:546512S000:PARTSMALL",
+    "tipo": "proveedor",
+    "titulo": "Amortiguador Delantero (LH) 54651-2S000 - PARTS MALL",
+    "fuente": "Proveedor C (simulado)",
+    "condicion": "nueva",
+    "precio": 28.44,
+    "moneda": "USD",
+    "origen": "Ciudad de Panamá",
+    "dias_estimados": 9,
+    "url": "",
+    "imagen": "/colt/productos/2tu_2011-13_54651-2s000_pmc_1.jpg",
+    "proveedor": {
+     "id": "prov-c",
+     "nombre": "Proveedor C (simulado)",
+     "origen": "Ciudad de Panamá"
+    },
+    "disponibles": 4,
+    "agotado": false,
+    "pieza": {
+     "numero": "54651-2S000",
+     "numero_fabricante": "PJA-FL022",
+     "marca_pieza": "PARTS MALL",
+     "nombre": "Amortiguador Delantero (LH)",
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "Catálogo de la tienda"
+    },
+    "ya_en_catalogo": {
+     "sku": "IM100889"
+    },
+    "simulado": true
+   },
+   {
+    "id": "prov-b:546512S000:PARTSMALL",
+    "tipo": "proveedor",
+    "titulo": "Amortiguador Delantero (LH) 54651-2S000 - PARTS MALL",
+    "fuente": "Proveedor B (simulado)",
+    "condicion": "nueva",
+    "precio": 23.32,
+    "moneda": "USD",
+    "origen": "Miami, EE. UU.",
+    "dias_estimados": 5,
+    "url": "",
+    "imagen": "/colt/productos/2tu_2011-13_54651-2s000_pmc_1.jpg",
+    "proveedor": {
+     "id": "prov-b",
+     "nombre": "Proveedor B (simulado)",
+     "origen": "Miami, EE. UU."
+    },
+    "disponibles": 0,
+    "agotado": true,
+    "pieza": {
+     "numero": "54651-2S000",
+     "numero_fabricante": "PJA-FL022",
+     "marca_pieza": "PARTS MALL",
+     "nombre": "Amortiguador Delantero (LH)",
+     "familia": "amortiguador",
+     "sistema": "tren_delantero",
+     "posicion": "delantera izquierda",
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2009,
+       "anio_hasta": 2013,
+       "motor": "2.0 Litros",
+       "mercado": null,
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "Catálogo de la tienda"
+    },
+    "ya_en_catalogo": {
+     "sku": "IM100889"
+    },
+    "simulado": true
+   }
+  ],
+  "sensor de detonacion": [
+   {
+    "id": "prov-b:392502G100:HYUNDAI",
+    "tipo": "proveedor",
+    "titulo": "Sensor de Detonación 39250-2G100 - HYUNDAI (motor 2.4L Theta II)",
+    "fuente": "Proveedor B (simulado)",
+    "condicion": "nueva",
+    "precio": 19.61,
+    "moneda": "USD",
+    "origen": "Miami, EE. UU.",
+    "dias_estimados": 8,
+    "url": "",
+    "imagen": null,
+    "proveedor": {
+     "id": "prov-b",
+     "nombre": "Proveedor B (simulado)",
+     "origen": "Miami, EE. UU."
+    },
+    "disponibles": 12,
+    "agotado": false,
+    "pieza": {
+     "numero": "39250-2G100",
+     "numero_fabricante": null,
+     "marca_pieza": "HYUNDAI",
+     "nombre": "Sensor de Detonación",
+     "familia": "sensor de detonación",
+     "sistema": "motor",
+     "posicion": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "Santa Fe",
+       "anio_desde": 2010,
+       "anio_hasta": 2012,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "TSB 26-01-033H de Hyundai (NHTSA ID 11030331)"
+    },
+    "ya_en_catalogo": null,
+    "simulado": true
+   },
+   {
+    "id": "prov-c:392502G100:HYUNDAI",
+    "tipo": "proveedor",
+    "titulo": "Sensor de Detonación 39250-2G100 - HYUNDAI (motor 2.4L Theta II)",
+    "fuente": "Proveedor C (simulado)",
+    "condicion": "nueva",
+    "precio": 22.49,
+    "moneda": "USD",
+    "origen": "Ciudad de Panamá",
+    "dias_estimados": 11,
+    "url": "",
+    "imagen": null,
+    "proveedor": {
+     "id": "prov-c",
+     "nombre": "Proveedor C (simulado)",
+     "origen": "Ciudad de Panamá"
+    },
+    "disponibles": 8,
+    "agotado": false,
+    "pieza": {
+     "numero": "39250-2G100",
+     "numero_fabricante": null,
+     "marca_pieza": "HYUNDAI",
+     "nombre": "Sensor de Detonación",
+     "familia": "sensor de detonación",
+     "sistema": "motor",
+     "posicion": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "Santa Fe",
+       "anio_desde": 2010,
+       "anio_hasta": 2012,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "TSB 26-01-033H de Hyundai (NHTSA ID 11030331)"
+    },
+    "ya_en_catalogo": null,
+    "simulado": true
+   }
+  ],
+  "kit de servicio": [
+   {
+    "id": "prov-b:211112G4S2FFF:HYUNDAI",
+    "tipo": "proveedor",
+    "titulo": "Kit de Servicio del Motor (SULEV/PZEV) 21111-2G4S2FFF - HYUNDAI (motor 2.4L Theta II)",
+    "fuente": "Proveedor B (simulado)",
+    "condicion": "nueva",
+    "precio": 23.41,
+    "moneda": "USD",
+    "origen": "Miami, EE. UU.",
+    "dias_estimados": 5,
+    "url": "",
+    "imagen": null,
+    "proveedor": {
+     "id": "prov-b",
+     "nombre": "Proveedor B (simulado)",
+     "origen": "Miami, EE. UU."
+    },
+    "disponibles": 2,
+    "agotado": false,
+    "pieza": {
+     "numero": "21111-2G4S2FFF",
+     "numero_fabricante": null,
+     "marca_pieza": "HYUNDAI",
+     "nombre": "Kit de Servicio del Motor (SULEV/PZEV)",
+     "familia": "kit de motor",
+     "sistema": "motor",
+     "posicion": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "Santa Fe",
+       "anio_desde": 2010,
+       "anio_hasta": 2012,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "TSB 26-01-033H de Hyundai (NHTSA ID 11030331)"
+    },
+    "ya_en_catalogo": null,
+    "simulado": true
+   },
+   {
+    "id": "prov-c:211112G4S2FFF:HYUNDAI",
+    "tipo": "proveedor",
+    "titulo": "Kit de Servicio del Motor (SULEV/PZEV) 21111-2G4S2FFF - HYUNDAI (motor 2.4L Theta II)",
+    "fuente": "Proveedor C (simulado)",
+    "condicion": "nueva",
+    "precio": 29.05,
+    "moneda": "USD",
+    "origen": "Ciudad de Panamá",
+    "dias_estimados": 9,
+    "url": "",
+    "imagen": null,
+    "proveedor": {
+     "id": "prov-c",
+     "nombre": "Proveedor C (simulado)",
+     "origen": "Ciudad de Panamá"
+    },
+    "disponibles": 6,
+    "agotado": false,
+    "pieza": {
+     "numero": "21111-2G4S2FFF",
+     "numero_fabricante": null,
+     "marca_pieza": "HYUNDAI",
+     "nombre": "Kit de Servicio del Motor (SULEV/PZEV)",
+     "familia": "kit de motor",
+     "sistema": "motor",
+     "posicion": null,
+     "compatibilidad": [
+      {
+       "marca": "Hyundai",
+       "modelo": "Tucson",
+       "anio_desde": 2010,
+       "anio_hasta": 2013,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      },
+      {
+       "marca": "Hyundai",
+       "modelo": "Santa Fe",
+       "anio_desde": 2010,
+       "anio_hasta": 2012,
+       "motor": "2.4L Theta II",
+       "mercado": "EE. UU.",
+       "notas": null
+      }
+     ],
+     "uso_general": false,
+     "origen_dato": "TSB 26-01-033H de Hyundai (NHTSA ID 11030331)"
+    },
+    "ya_en_catalogo": null,
+    "simulado": true
+   }
+  ],
+  "correa de distribucion": []
+ },
+ "aviso": "Proveedores ficticios para la demo. Los nombres no son de empresas reales. Las piezas son reales (catálogo de la tienda y TSB 26-01-033H de NHTSA); costo, existencia y días de entrega son simulados."
+}

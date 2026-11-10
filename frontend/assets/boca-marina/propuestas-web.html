@@ -1,0 +1,930 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boca Marina · Propuestas de inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Italiana&family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B2A2E;--sand:#F4ECDF;--sea:#7FCFCB;--coral:#E8866A;--coral2:#C8593B;--bar:56px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--pad:clamp(20px,6vw,96px);--sec:clamp(80px,11vw,160px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#E7E2D9;color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ol,ul{list-style:none}
+svg.wa{width:16px;height:16px;fill:currentColor;flex:none}
+
+/* barra de propuestas */
+.top{position:sticky;top:0;z-index:100;height:var(--bar);display:flex;align-items:center;gap:24px;padding:0 20px;background:rgba(11,42,46,.97);color:var(--sand)}
+.top b{font:500 19px/1 var(--serif);white-space:nowrap}
+.top b span{font:300 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-left:10px}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{font-size:12px;letter-spacing:.04em;padding:8px 12px;border-radius:99px;white-space:nowrap;opacity:.62;transition:opacity .3s,background .3s}
+.tabs a i{font-style:normal;font-weight:500;margin-right:6px;color:var(--sea)}
+.tabs a:hover{opacity:1}
+.tabs a.on{background:var(--sand);color:var(--ink);opacity:1}
+.tabs a.on i{color:var(--coral2)}
+@media(max-width:900px){.top b{display:none}}
+
+/* ficha antes de cada maqueta */
+.intro{scroll-margin-top:var(--bar);max-width:1240px;margin:0 auto;padding:110px 24px 40px;display:grid;grid-template-columns:150px 1fr;gap:32px;color:#3B4A4B}
+.intro-n{font:300 92px/.8 var(--serif);color:var(--ink)}
+.intro h2{font:400 34px/1.1 var(--serif);color:var(--ink);margin-bottom:18px}
+.intro dl{display:grid;grid-template-columns:120px 1fr;gap:8px 20px;font-size:14.5px;line-height:1.6;max-width:880px}
+.intro dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding-top:4px;color:#7A8A8A}
+@media(max-width:700px){.intro{grid-template-columns:1fr;gap:8px;padding:80px 16px 28px}.intro-n{font-size:56px}.intro dl{grid-template-columns:1fr;gap:2px}.intro dd{margin-bottom:10px}}
+.mock{position:relative;overflow:clip;box-shadow:0 30px 80px -40px rgba(11,42,46,.45)}
+
+/* piezas comunes */
+.h{position:sticky;top:var(--bar);z-index:30;display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px;padding:0 var(--pad);background:var(--hbg,rgba(244,236,223,.9));color:var(--hfg,var(--ink));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--hline,transparent)}
+.h-brand{display:flex;align-items:center;gap:12px;min-width:0}
+.h-brand img{width:34px;height:34px;border-radius:7px}
+.h-brand span{font:500 21px/1 var(--hfont,var(--serif));white-space:nowrap}
+.h-brand small{display:block;font:400 9px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;margin-top:5px;opacity:.65}
+.h-nav{display:flex;gap:30px;font-size:13px;letter-spacing:.1em}
+.h-nav a{opacity:.85;transition:opacity .3s}.h-nav a:hover{opacity:1}
+.h-end{display:flex;align-items:center;gap:18px;font-size:12px}
+.h-lang{letter-spacing:.1em;white-space:nowrap}.h-lang a{opacity:.5}
+.h-tel{opacity:.6;white-space:nowrap}
+.h-wa{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:var(--rad,99px);background:var(--wabg,var(--ink));color:var(--wafg,var(--sand));font-weight:500;letter-spacing:.06em;white-space:nowrap;transition:transform .4s,filter .4s}
+.h-wa:hover{filter:brightness(1.08)}
+@media(max-width:1000px){.h-nav,.h-tel{display:none}}
+@media(max-width:560px){.h{height:58px;gap:10px}.h-brand small,.h-wa .lg{display:none}.h-brand span{font-size:18px}.h-brand img{width:30px;height:30px}.h-wa{padding:9px 13px}.h-end{gap:12px}}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:var(--rad,99px);font:500 13px/1 var(--sans);letter-spacing:.08em;transition:filter .4s,transform .4s;white-space:nowrap}
+.btn:hover{filter:brightness(1.07)}
+.b-ink{background:var(--ink);color:var(--sand)}.b-coral{background:var(--coral);color:var(--ink)}.b-sand{background:var(--sand);color:var(--ink)}.b-deep{background:var(--coral2);color:#fff}
+.lnk{font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px;white-space:nowrap}
+.eb{font-size:11px;letter-spacing:.34em;text-transform:uppercase}
+@media(max-width:560px){.lnk{white-space:normal;letter-spacing:.1em;line-height:1.6}.btn{white-space:normal;line-height:1.25}}
+.rec{display:flex;justify-content:center;gap:clamp(24px,6vw,96px);flex-wrap:wrap;padding:30px var(--pad);text-align:center}
+.rec div{display:flex;flex-direction:column;gap:6px}
+.rec b{font:500 19px/1.2 var(--serif)}
+.rec span{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;opacity:.65}
+.f{background:var(--fbg,var(--ink));color:var(--ffg,var(--sand));padding:var(--sec) var(--pad) 36px}
+.f-cta{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding-bottom:56px;margin-bottom:56px;border-bottom:1px solid var(--fline,rgba(244,236,223,.16))}
+.f-cta p{font:300 clamp(30px,4vw,54px)/1.08 var(--ffont,var(--serif));max-width:640px}
+.f-grid{display:grid;grid-template-columns:1.3fr 1.2fr 1fr 1.2fr 1fr;gap:32px;font-size:14px;line-height:1.75}
+.f-grid h4{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;opacity:.55;margin-bottom:12px}
+.f-grid img{width:44px;height:44px;border-radius:8px;margin-bottom:14px}
+.f-grid .bn{font:500 24px/1 var(--ffont,var(--serif))}
+.f-grid .bs{display:block;font-size:10px;letter-spacing:.28em;text-transform:uppercase;opacity:.6;margin-top:8px}
+.f-grid .q{opacity:.55;font-size:12.5px}
+.f-lang{margin-top:10px;letter-spacing:.12em}.f-lang a{opacity:.5}
+.f-legal{margin-top:64px;font-size:11.5px;opacity:.45;letter-spacing:.06em}
+@media(max-width:900px){.f-grid{grid-template-columns:1fr 1fr}.f-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:480px){.f-grid{grid-template-columns:1fr}}
+.fabw{position:sticky;bottom:16px;height:0;z-index:40;display:none;justify-content:flex-end;padding-right:16px}
+.fab{transform:translateY(-100%);display:inline-flex;align-items:center;gap:9px;padding:15px 20px;border-radius:99px;background:var(--fab,#1F7A5A);color:#fff;font:500 13px/1 var(--sans);letter-spacing:.04em;box-shadow:0 14px 34px -10px rgba(0,0,0,.45)}
+.fab svg{width:20px;height:20px;fill:currentColor}
+@media(max-width:760px){.fabw{display:flex}}
+.im{overflow:hidden}.im img{width:100%;height:100%;object-fit:cover}
+.zoom img{transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}.zoom:hover img{transform:scale(1.045)}
+[data-r]{opacity:0;transform:translateY(22px);transition:opacity 1.3s ease,transform 1.5s cubic-bezier(.2,.7,.2,1)}
+[data-r].in{opacity:1;transform:none}
+.kb{animation:kb 26s ease-out both}
+@keyframes kb{from{transform:scale(1.1)}to{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}[data-r]{opacity:1;transform:none;transition:none}.kb,.p5-hero .b{animation:none!important}.zoom img,.p9-imgs img{transition:none!important}}
+
+/* P1 cine */
+.p1{--hbg:rgba(11,42,46,.62);--hfg:var(--sand);--wabg:var(--coral);--wafg:var(--ink);--fab:var(--coral2);background:var(--ink);color:var(--sand)}
+.p1-hero{position:relative;height:calc(100svh - var(--bar));min-height:600px;max-height:980px;margin-top:-64px;overflow:hidden;display:flex;align-items:flex-end}
+.p1-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 68%}
+.p1-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,42,46,.5),transparent 28%,transparent 42%,rgba(11,42,46,.9))}
+.p1-t{position:relative;z-index:1;padding:0 var(--pad) clamp(48px,9vh,110px);max-width:1180px}
+.p1-t .eb{margin-bottom:26px;opacity:.85}
+.p1-t h1{font:300 clamp(56px,9.6vw,156px)/.88 var(--serif);letter-spacing:-.025em}
+.p1-t h1 em{color:#F7C9AC}
+.p1-t .l{max-width:460px;margin:30px 0 38px;font-size:16.5px;line-height:1.7;font-weight:300;opacity:.92}
+.p1-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.p1-cta small{font-size:13px;opacity:.75;max-width:250px;line-height:1.5}
+.p1-coord{position:absolute;z-index:1;right:var(--pad);bottom:clamp(48px,9vh,110px);writing-mode:vertical-rl;font-size:10px;letter-spacing:.4em;text-transform:uppercase;opacity:.65}
+.p1-lede{padding:var(--sec) 24px;text-align:center}
+.p1-lede p{max-width:900px;margin:auto;font:300 clamp(27px,3.5vw,48px)/1.24 var(--serif)}
+.p1-lede em{color:var(--sea)}
+.p1 .rec{border-top:1px solid rgba(244,236,223,.14);border-bottom:1px solid rgba(244,236,223,.14);padding:26px var(--pad)}
+.p1-ch{display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:0 var(--pad);margin-bottom:52px}
+.p1-ch .eb{color:var(--coral)}
+.p1-ch h2{font:300 clamp(42px,5.6vw,86px)/1 var(--serif)}
+.p1-zones,.p1-dishes,.p1-events{padding:var(--sec) 0}
+.p1-strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,27vw);gap:22px;overflow-x:auto;padding:0 var(--pad) 26px;scroll-snap-type:x mandatory;scroll-padding:0 var(--pad);scrollbar-width:thin;scrollbar-color:rgba(244,236,223,.25) transparent}
+.p1-fr{scroll-snap-align:start}
+.p1-fr .im{aspect-ratio:3/4;margin-bottom:20px}
+.p1-fr .n{font-size:11px;letter-spacing:.3em;opacity:.5}
+.p1-fr h3{font:400 30px/1.1 var(--serif);margin:6px 0 8px}
+.p1-fr p{font-size:14px;line-height:1.65;opacity:.7;margin-bottom:16px;font-weight:300}
+.p1 .lnk{color:var(--sea)}
+.p1-dish{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(28px,6vw,100px);padding:0 var(--pad);margin-bottom:clamp(56px,8vw,110px)}
+.p1-dish:nth-child(even) .im{order:2}
+.p1-dish .im{aspect-ratio:4/5;max-height:640px}
+.p1-dish .n{font:300 110px/.8 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(244,236,223,.35)}
+.p1-dish h3{font:300 clamp(36px,4.2vw,62px)/1.02 var(--serif);margin:18px 0 16px}
+.p1-dish p{font-size:15.5px;line-height:1.75;opacity:.75;max-width:420px;font-weight:300}
+.p1-award{margin:0 var(--pad);padding:clamp(40px,6vw,80px);border:1px solid rgba(232,134,106,.45);display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.p1-award .y{font:300 clamp(80px,12vw,180px)/.8 var(--serif);color:var(--coral)}
+.p1-award h3{font:300 clamp(32px,3.6vw,52px)/1.05 var(--serif);margin:12px 0}
+.p1-award p{opacity:.7;line-height:1.7;max-width:460px;font-weight:300}
+.p1-sun{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.p1-sun>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.p1-sun:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,42,46,.85),rgba(11,42,46,.2) 65%)}
+.p1-sun div{position:relative;z-index:1;padding:0 var(--pad);max-width:720px}
+.p1-sun h2{font:300 clamp(44px,6vw,92px)/.98 var(--serif);margin:20px 0 26px}
+.p1-sun p{font-size:16.5px;line-height:1.75;opacity:.85;margin-bottom:34px;font-weight:300;max-width:460px}
+.p1-ev{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:0 var(--pad)}
+.p1-ev .im{aspect-ratio:4/5;margin-bottom:18px}
+.p1-ev h3{font:400 26px/1.1 var(--serif);margin-bottom:8px}
+.p1-ev p{font-size:14px;line-height:1.6;opacity:.7;margin-bottom:16px;font-weight:300}
+.p1 .f{--fbg:#071E21}
+@media(max-width:900px){.p1-dish{grid-template-columns:1fr}.p1-dish:nth-child(even) .im{order:0}.p1-ev{grid-template-columns:1fr 1fr}.p1-award{grid-template-columns:1fr}.p1-coord{display:none}}
+@media(max-width:560px){.p1-hero{margin-top:-58px}.p1-ev{grid-template-columns:1fr}.p1-strip{grid-auto-columns:78vw}}
+
+/* P2 elige tu lugar */
+.p2{--hbg:rgba(244,236,223,.93);--wabg:var(--ink);--fab:var(--ink);background:var(--sand)}
+.p2-hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:calc(100svh - var(--bar) - 64px)}
+.p2-pic{position:relative;overflow:hidden;min-height:520px}
+.p2-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.p2-pic:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(11,42,46,.82))}
+.p2-pic div{position:absolute;z-index:1;left:clamp(20px,4vw,56px);right:clamp(20px,4vw,56px);bottom:clamp(28px,5vw,56px);color:var(--sand)}
+.p2-pic h1{font:300 clamp(46px,5.6vw,88px)/.95 var(--serif);margin-top:14px}
+.p2-pic p{margin-top:16px;font-size:15px;opacity:.85;font-weight:300}
+.p2-ch{padding:clamp(36px,5vw,72px) clamp(20px,4.5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.p2-ch .eb{color:var(--coral2)}
+.p2-ch h2{font:400 clamp(36px,3.6vw,54px)/1 var(--serif);margin:14px 0 28px}
+.p2-list{border-top:1px solid rgba(11,42,46,.15)}
+.p2-list button{width:100%;display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:12px;padding:15px 4px;border-bottom:1px solid rgba(11,42,46,.15);text-align:left;transition:background .4s,padding .4s}
+.p2-list span{font-size:11px;opacity:.45;letter-spacing:.1em}
+.p2-list b{font:500 22px/1.1 var(--serif)}
+.p2-list em{font-style:normal;font-size:12.5px;opacity:.55}
+.p2-list button.on{background:rgba(127,207,203,.28);padding-left:14px}
+.p2-list button.on b{color:var(--coral2)}
+.p2-prev{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin:24px 0}
+.p2-prev .im{aspect-ratio:1;border-radius:4px}
+.p2-prev p{font-size:14.5px;line-height:1.6;opacity:.8}
+.p2-note{font-size:12.5px;opacity:.6;margin-top:14px;line-height:1.5}
+.p2-map{padding:var(--sec) var(--pad);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center;background:#EAF5F3}
+.p2-map h2{font:300 clamp(40px,4.6vw,70px)/1 var(--serif);margin:14px 0 20px}
+.p2-map p{font-size:15.5px;line-height:1.75;opacity:.8;max-width:440px}
+.p2-aer{position:relative;max-width:520px;justify-self:center;width:100%}
+.p2-aer img{width:100%;border-radius:6px}
+.p2-pin{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--sand);color:var(--ink);font:500 12px/30px var(--sans);text-align:center;box-shadow:0 0 0 0 rgba(232,134,106,.6),0 6px 16px rgba(0,0,0,.25);transition:background .4s,color .4s,transform .4s}
+.p2-pin.on{background:var(--coral2);color:#fff;transform:scale(1.2);animation:pulse 2.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 14px rgba(232,134,106,0),0 6px 16px rgba(0,0,0,.25)}}
+.p2-sec{padding:var(--sec) var(--pad)}
+.p2-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.p2-head h2{font:300 clamp(40px,4.6vw,70px)/1 var(--serif)}
+.p2-dishes{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.p2-dishes .im{aspect-ratio:3/4;border-radius:4px;margin-bottom:14px}
+.p2-dishes h3{font:500 21px/1.15 var(--serif)}
+.p2-dishes p{font-size:13px;opacity:.65;margin-top:6px;line-height:1.5}
+.p2-aw{aspect-ratio:3/4;border-radius:4px;margin-bottom:14px;background:var(--ink);color:var(--sand);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.p2-aw b{font:300 64px/1 var(--serif);color:var(--coral)}
+.p2-aw span{font-size:10px;letter-spacing:.24em;text-transform:uppercase;opacity:.75;margin-top:10px;line-height:1.6}
+.p2 .rec{background:var(--ink);color:var(--sand)}
+.p2-sun{display:grid;grid-template-columns:1fr 1fr;background:var(--coral);color:var(--ink)}
+.p2-sun .im{min-height:520px}
+.p2-sun div{padding:clamp(40px,6vw,96px);align-self:center}
+.p2-sun h2{font:300 clamp(40px,4.4vw,66px)/1 var(--serif);margin:14px 0 18px}
+.p2-sun p{font-size:15.5px;line-height:1.7;margin-bottom:28px;max-width:420px}
+.p2-ev{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.p2-ev a{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;padding:16px;background:#fff;border-radius:6px;transition:transform .5s}
+.p2-ev a:hover{transform:translateY(-3px)}
+.p2-ev .im{aspect-ratio:1;border-radius:4px}
+.p2-ev h3{font:500 25px/1.1 var(--serif);margin-bottom:6px}
+.p2-ev p{font-size:13.5px;opacity:.7;line-height:1.55;margin-bottom:12px}
+.p2-ev .lnk{color:var(--coral2)}
+@media(max-width:1000px){.p2-hero,.p2-map,.p2-sun{grid-template-columns:1fr}.p2-pic{min-height:62svh}.p2-dishes{grid-template-columns:repeat(2,1fr)}.p2-ev{grid-template-columns:1fr}.p2-sun .im{min-height:340px}}
+@media(max-width:520px){.p2-ev a{grid-template-columns:96px 1fr;gap:14px;padding:12px}.p2-list em{display:none}}
+
+/* P3 tipografico */
+.p3{--hbg:rgba(251,248,243,.94);--hline:rgba(11,42,46,.08);--wabg:var(--ink);--fab:var(--ink);--fbg:#FBF8F3;--ffg:var(--ink);--fline:rgba(11,42,46,.12);background:#FBF8F3;font-weight:300}
+.p3 .h-brand span{font:400 17px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+.p3-hero{padding:clamp(70px,10vw,150px) var(--pad) clamp(60px,8vw,110px)}
+.p3-k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.55}
+.p3-hero h1{font:300 clamp(58px,10.5vw,176px)/.9 var(--sans);letter-spacing:-.045em;margin:34px 0 64px}
+.p3-hero h1 em{font:italic 300 1.06em/1 var(--serif);letter-spacing:-.02em}
+.p3-hrow{display:grid;grid-template-columns:260px 1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;border-top:1px solid rgba(11,42,46,.15);padding-top:30px}
+.p3-hrow .im{aspect-ratio:4/5}
+.p3-hrow dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;font-size:14px}
+.p3-hrow dt{opacity:.5}
+.p3-cta p{font-size:15px;line-height:1.6;margin-bottom:22px;max-width:320px}
+.p3-cta .tel{display:block;margin-top:16px;font-size:13px;opacity:.55}
+.p3-sec{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:clamp(60px,8vw,110px) var(--pad);border-top:1px solid rgba(11,42,46,.12)}
+.p3-lab{font-size:13px;letter-spacing:.06em}
+.p3-lab span{display:block;opacity:.5;margin-top:6px}
+.p3-rows li{border-bottom:1px solid rgba(11,42,46,.12)}
+.p3-rows li:first-child{border-top:1px solid rgba(11,42,46,.12)}
+.p3-rows a,.p3-rows div{position:relative;display:grid;grid-template-columns:1.1fr 1.3fr auto;gap:28px;align-items:baseline;padding:26px 0}
+.p3-rows .n{font:400 clamp(26px,2.6vw,38px)/1.1 var(--sans);letter-spacing:-.02em;transition:padding .6s,color .4s}
+.p3-rows .d{font-size:14.5px;line-height:1.6;opacity:.65;max-width:440px}
+.p3-rows .go{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;transition:opacity .4s}
+.p3-rows a:hover .n{padding-left:16px;color:var(--coral2)}
+.p3-rows a:hover .go{opacity:1}
+.p3-rows img{position:absolute;right:16%;top:50%;width:200px;aspect-ratio:4/5;object-fit:cover;opacity:0;transform:translateY(-50%) rotate(-2deg) scale(.95);transition:opacity .6s,transform .8s;pointer-events:none;z-index:2;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.p3-rows a:hover img{opacity:1;transform:translateY(-50%) rotate(-2deg) scale(1)}
+.p3-menu .n{font:italic 400 clamp(34px,3.8vw,58px)/1.05 var(--serif)}
+.p3-tag{display:inline-block;font:500 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--coral2);border:1px solid;padding:6px 9px;border-radius:99px;margin-left:12px;vertical-align:middle}
+.p3-big{font:300 clamp(34px,4.4vw,68px)/1.1 var(--sans);letter-spacing:-.03em;max-width:1000px}
+.p3-big em{font:italic 300 1.08em var(--serif);color:var(--coral2)}
+.p3-sunrow{display:flex;gap:28px;align-items:end;margin-top:44px;flex-wrap:wrap}
+.p3-sunrow .im{width:180px;aspect-ratio:4/5}
+.p3-sunrow p{font-size:14.5px;line-height:1.7;max-width:360px;opacity:.75}
+.p3-rec{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.p3-rec b{display:block;font:400 26px/1.15 var(--sans);letter-spacing:-.01em;margin-bottom:6px}
+.p3-rec span{font-size:13.5px;opacity:.55}
+.p3 .f-cta p{font-family:var(--sans);font-weight:300;letter-spacing:-.03em}
+.p3 .f-grid .bn{font:400 15px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+@media(max-width:900px){.p3-hrow{grid-template-columns:1fr 1fr}.p3-hrow .im{grid-column:1/-1;max-width:260px}.p3-sec{grid-template-columns:1fr;gap:20px}.p3-rows a,.p3-rows div{grid-template-columns:1fr auto;gap:8px 20px}.p3-rows .d{grid-column:1/-1;grid-row:2}.p3-rows img{display:none}}
+@media(max-width:560px){.p3-hrow{grid-template-columns:1fr}.p3-rec{grid-template-columns:1fr}}
+
+/* P4 revista */
+.p4{--hbg:rgba(247,241,230,.94);--hline:rgba(11,42,46,.12);--wabg:var(--coral2);--wafg:#fff;--fab:var(--coral2);--hfont:'Bodoni Moda',serif;--fbg:#F7F1E6;--ffg:var(--ink);--fline:rgba(11,42,46,.18);--ffont:'Bodoni Moda',serif;background:#F7F1E6}
+.p4 .h-brand span{font-size:18px;font-weight:400}
+.p4-mast{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:20px;padding:40px var(--pad) 22px;border-bottom:3px double rgba(11,42,46,.5)}
+.p4-mast span{font-size:11px;letter-spacing:.24em;text-transform:uppercase}
+.p4-mast span:last-child{text-align:right}
+.p4-mast .lg{font:400 clamp(54px,9vw,150px)/.8 'Bodoni Moda',serif;letter-spacing:-.03em;text-align:center}
+.p4-mast .lg i{color:var(--coral2)}
+.p4-cover{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,64px);padding:36px var(--pad) var(--sec)}
+.p4-cover figure .im{aspect-ratio:4/4.6}
+.p4 figcaption{font-size:12px;opacity:.6;margin-top:10px;font-style:italic;font-family:var(--serif);font-size:15px}
+.p4-cl h2{font:400 clamp(44px,5vw,82px)/.98 'Bodoni Moda',serif;letter-spacing:-.02em}
+.p4-cl h2 i{color:var(--coral2)}
+.p4-dek{font:italic 400 22px/1.4 var(--serif);margin:24px 0 28px;opacity:.85}
+.p4-toc{border-top:1px solid var(--ink);margin-bottom:32px}
+.p4-toc li{display:grid;grid-template-columns:48px 1fr;padding:14px 0;border-bottom:1px solid rgba(11,42,46,.2);font-size:15px;line-height:1.4}
+.p4-toc b{font:600 15px 'Bodoni Moda',serif;color:var(--coral2)}
+.p4-small{font-size:12.5px;opacity:.6;margin-top:14px}
+.p4-feat{display:grid;grid-template-columns:3fr 2fr;gap:clamp(28px,5vw,80px);padding:0 var(--pad) var(--sec)}
+.p4-cols{columns:2;column-gap:40px;font:400 19px/1.62 var(--serif)}
+.p4-cols p{margin-bottom:14px}
+.p4-cols p:first-child:first-letter{float:left;font:400 96px/.78 'Bodoni Moda',serif;padding:8px 12px 0 0;color:var(--coral2)}
+.p4-feat h3{font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:24px;grid-column:1/-1}
+.p4-pq{border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:28px 0;font:italic 400 clamp(28px,2.8vw,40px)/1.2 'Bodoni Moda',serif;align-self:start}
+.p4-pq small{display:block;font:400 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;margin-top:18px;font-style:normal;opacity:.6}
+.p4-sh{display:flex;align-items:baseline;gap:22px;border-top:1px solid var(--ink);padding-top:16px;margin-bottom:40px}
+.p4-sh span{font:600 15px 'Bodoni Moda',serif;color:var(--coral2)}
+.p4-sh h2{font:400 clamp(36px,4vw,60px)/1 'Bodoni Moda',serif;letter-spacing:-.02em}
+.p4-sh p{margin-left:auto;font:italic 17px var(--serif);opacity:.7}
+.p4-sec{padding:0 var(--pad) var(--sec)}
+.p4-zg{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.p4-z{grid-column:span 2}
+.p4-z:nth-child(1),.p4-z:nth-child(2){grid-column:span 3}
+.p4-z .im{aspect-ratio:4/3;margin-bottom:12px}
+.p4-z:nth-child(-n+2) .im{aspect-ratio:16/10}
+.p4-z .k{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--coral2)}
+.p4-z h3{font:400 28px/1.1 'Bodoni Moda',serif;margin:6px 0 6px}
+.p4-z p{font:400 17px/1.5 var(--serif);opacity:.8;margin-bottom:10px}
+.p4-dg{display:grid;grid-template-columns:repeat(4,1fr) 1.2fr;gap:24px;align-items:start}
+.p4-d .im{aspect-ratio:3/4;margin-bottom:12px}
+.p4-d b{font:600 14px 'Bodoni Moda',serif;color:var(--coral2)}
+.p4-d h3{font:400 23px/1.15 'Bodoni Moda',serif;margin:4px 0 6px}
+.p4-d p{font:400 16px/1.45 var(--serif);opacity:.8}
+.p4-box{background:var(--ink);color:var(--sand);padding:28px}
+.p4-box .eb{color:var(--coral);font-size:10px}
+.p4-box h3{font:400 28px/1.1 'Bodoni Moda',serif;margin:14px 0 10px}
+.p4-box p{font:400 17px/1.5 var(--serif);opacity:.85}
+.p4-box hr{border:0;border-top:1px solid rgba(244,236,223,.2);margin:20px 0}
+.p4-box li{font-size:13px;line-height:1.5;margin-bottom:10px;opacity:.85}
+.p4-sun{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.p4-sun .im{aspect-ratio:4/5;max-height:760px}
+.p4-tl li{display:grid;grid-template-columns:80px 1fr;padding:18px 0;border-bottom:1px solid rgba(11,42,46,.18);font:400 19px/1.45 var(--serif)}
+.p4-tl b{font:600 15px 'Bodoni Moda',serif;color:var(--coral2);padding-top:3px}
+.p4-eg{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.p4-eg .im{aspect-ratio:1;margin-bottom:12px;filter:saturate(.9)}
+.p4-eg h3{font:400 23px/1.15 'Bodoni Moda',serif;margin-bottom:6px}
+.p4-eg p{font:400 16px/1.45 var(--serif);opacity:.8;margin-bottom:12px}
+.p4 .lnk{color:var(--coral2)}
+.p4 .rec{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:0 var(--pad) var(--sec);padding:22px 0}
+.p4 .rec b{font-family:'Bodoni Moda',serif;font-size:17px}
+@media(max-width:1000px){.p4-cover,.p4-feat,.p4-sun{grid-template-columns:1fr}.p4-dg{grid-template-columns:1fr 1fr}.p4-eg{grid-template-columns:1fr 1fr}.p4-box{grid-column:1/-1}}
+@media(max-width:640px){.p4-mast{grid-template-columns:1fr}.p4-mast span{display:none}.p4-cols{columns:1}.p4-zg{grid-template-columns:1fr}.p4-z,.p4-z:nth-child(1),.p4-z:nth-child(2){grid-column:auto}.p4-sh p{display:none}.p4-eg{grid-template-columns:1fr}}
+
+/* P5 nocturno */
+.p5{--gold:#E9A983;--hbg:rgba(5,22,25,.6);--hfg:#F1E6D6;--hline:rgba(233,169,131,.18);--wabg:transparent;--wafg:var(--gold);--fab:#B8573A;--fbg:#03100F;--ffg:#EADFCF;--fline:rgba(233,169,131,.2);background:#061719;color:#EADFCF}
+.p5 .h-wa{border:1px solid var(--gold)}
+.p5 .h-brand span{font:400 15px/1 var(--serif);letter-spacing:.34em;text-transform:uppercase}
+.p5-hero{position:relative;height:calc(100svh - var(--bar));min-height:600px;max-height:960px;margin-top:-64px;overflow:hidden;display:grid;place-items:center;text-align:center}
+.p5-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p5-hero .a{object-position:50% 70%}
+.p5-hero .b{opacity:0;animation:dusk 18s ease-in-out 3s infinite alternate}
+@keyframes dusk{0%,25%{opacity:0}75%,100%{opacity:1}}
+.p5-hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(3,16,15,.3),rgba(3,16,15,.82) 75%)}
+.p5-ht{position:relative;z-index:1;padding:0 20px}
+.p5-orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);font-size:10.5px;letter-spacing:.42em;text-transform:uppercase}
+.p5-orn:before,.p5-orn:after{content:"";width:56px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.p5-orn:after{transform:scaleX(-1)}
+.p5-ht h1{font:300 clamp(54px,8.4vw,132px)/.92 var(--serif);letter-spacing:.01em;margin:30px 0 24px}
+.p5-ht h1 em{color:var(--gold)}
+.p5-ht p{font-size:13px;letter-spacing:.24em;text-transform:uppercase;opacity:.75;margin-bottom:42px;line-height:1.8}
+.p5 .b-gold{background:linear-gradient(120deg,#F2BE98,#C8593B);color:#1A0E09}
+.p5-tel{display:block;margin-top:20px;font-size:12px;letter-spacing:.2em;opacity:.55}
+.p5 .rec{padding:34px var(--pad);border-top:1px solid rgba(233,169,131,.18);border-bottom:1px solid rgba(233,169,131,.18)}
+.p5 .rec b{color:var(--gold);font-weight:400;letter-spacing:.06em}
+.p5-sec{padding:var(--sec) var(--pad)}
+.p5-sh{text-align:center;margin-bottom:64px}
+.p5-sh h2{font:300 clamp(40px,5vw,78px)/1 var(--serif);margin-top:22px}
+.p5-z{display:grid;grid-template-columns:120px 1fr 1.2fr 200px;gap:32px;align-items:center;padding:30px 0;border-top:1px solid rgba(233,169,131,.16)}
+.p5-z:last-child{border-bottom:1px solid rgba(233,169,131,.16)}
+.p5-z .n{font:300 84px/.8 var(--serif);color:transparent;-webkit-text-stroke:1px rgba(233,169,131,.55)}
+.p5-z h3{font:400 34px/1.05 var(--serif)}
+.p5-z p{font-size:14.5px;line-height:1.7;opacity:.65;font-weight:300}
+.p5-z .im{aspect-ratio:4/3;outline:1px solid rgba(233,169,131,.4);outline-offset:6px}
+.p5-z .lnk{color:var(--gold);display:inline-block;margin-top:16px}
+.p5-menu{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,100px);align-items:center}
+.p5-menu .im{aspect-ratio:4/5;max-height:720px}
+.p5-dl li{text-align:center;padding:24px 0}
+.p5-dl li+li:before{content:"";display:block;width:7px;height:7px;margin:0 auto 26px;border:1px solid var(--gold);transform:rotate(45deg)}
+.p5-dl h3{font:400 clamp(28px,2.8vw,40px)/1.1 var(--serif);letter-spacing:.02em}
+.p5-dl p{font-size:13.5px;opacity:.6;margin-top:8px;font-weight:300;letter-spacing:.02em}
+.p5-dl .aw{display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.p5-sun{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:80vh;background:#03100F}
+.p5-sun .im{position:relative}
+.p5-sun .im:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,#03100F)}
+.p5-sun div{align-self:center;padding:var(--pad)}
+.p5-sun h2{font:300 clamp(42px,5vw,76px)/1 var(--serif);margin:22px 0 22px}
+.p5-sun h2 em{color:var(--gold)}
+.p5-sun p{font-size:15.5px;line-height:1.8;opacity:.72;margin-bottom:34px;max-width:440px;font-weight:300}
+.p5-ev{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.p5-ev a{position:relative;display:block;aspect-ratio:3/4.4;overflow:hidden;border:1px solid rgba(233,169,131,.3)}
+.p5-ev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .8s,transform 1.8s}
+.p5-ev a:hover img{opacity:.95;transform:scale(1.04)}
+.p5-ev a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(3,16,15,.92))}
+.p5-ev div{position:absolute;z-index:1;left:22px;right:22px;bottom:22px}
+.p5-ev h3{font:400 27px/1.08 var(--serif);margin-bottom:8px}
+.p5-ev p{font-size:13px;opacity:.7;line-height:1.5;margin-bottom:14px;font-weight:300}
+.p5-ev .lnk{color:var(--gold)}
+.p5 .f .f-cta p em{color:var(--gold)}
+@media(max-width:1000px){.p5-z{grid-template-columns:70px 1fr;gap:14px 20px}.p5-z .n{font-size:56px}.p5-z>div,.p5-z .im{grid-column:2}.p5-z .im{max-width:320px}.p5-menu,.p5-sun{grid-template-columns:1fr}.p5-sun .im{min-height:380px}.p5-ev{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.p5-hero{margin-top:-58px}.p5-ev{grid-template-columns:1fr}}
+
+/* P6 mediterraneo */
+.p6{--hbg:rgba(255,253,249,.92);--wabg:#2F7C86;--wafg:#fff;--fab:#2F7C86;--hfont:'Italiana',serif;--fbg:#F4ECDF;--ffg:var(--ink);--fline:rgba(11,42,46,.14);--ffont:'Italiana',serif;--deep:#2F7C86;background:#FFFDF9}
+.p6 .h-brand span{font-size:24px;font-weight:400;letter-spacing:.04em}
+.arch{border-radius:999px 999px 0 0;overflow:hidden}
+.p6-hero{display:grid;grid-template-columns:1fr minmax(300px,420px) 1fr;gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(48px,7vw,100px) var(--pad) var(--sec)}
+.p6-hero .arch{aspect-ratio:3/4.3;box-shadow:0 40px 80px -40px rgba(47,124,134,.45)}
+.p6-hero h1{font:400 clamp(48px,6vw,96px)/.95 'Italiana',serif;letter-spacing:.01em}
+.p6-l{text-align:right}
+.p6-l .eb{color:var(--deep);display:block;margin-bottom:26px}
+.p6-r p{font-size:16px;line-height:1.7;margin:24px 0 30px;opacity:.75;max-width:320px;font-weight:300}
+.p6-r .tel{display:block;margin-top:16px;font-size:12.5px;opacity:.55}
+.p6-wave{display:block;width:140px;margin:0 auto;color:var(--sea)}
+.p6-intro{text-align:center;padding:0 24px var(--sec)}
+.p6-intro p{max-width:760px;margin:30px auto 0;font:400 clamp(26px,2.8vw,38px)/1.35 'Italiana',serif}
+.p6-sec{padding:var(--sec) var(--pad)}
+.p6-sh{text-align:center;margin-bottom:60px}
+.p6-sh .eb{color:var(--deep)}
+.p6-sh h2{font:400 clamp(40px,4.8vw,72px)/1 'Italiana',serif;margin-top:16px}
+.p6-zg{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(14px,2vw,28px);text-align:center}
+.p6-zg .arch{aspect-ratio:3/4.4;margin-bottom:20px}
+.p6-zg h3{font:400 25px/1.1 'Italiana',serif;margin-bottom:8px}
+.p6-zg p{font-size:13.5px;opacity:.65;line-height:1.55;margin-bottom:14px;font-weight:300}
+.p6 .lnk{color:var(--deep)}
+.p6-menu{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:clamp(20px,4vw,64px);align-items:center;background:var(--sand)}
+.p6-menu .arch{aspect-ratio:3/4.4}
+.p6-menu .arch:last-child{margin-top:120px}
+.p6-dl{text-align:center}
+.p6-dl li{padding:18px 0;border-bottom:1px solid rgba(11,42,46,.12)}
+.p6-dl li:last-child{border:0}
+.p6-dl h3{font:400 30px/1.1 'Italiana',serif}
+.p6-dl p{font-size:13.5px;opacity:.65;margin-top:6px;font-weight:300}
+.p6-dl .aw{color:var(--coral2);font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;display:block;margin-top:8px}
+.p6 .rec{padding:56px var(--pad);color:var(--deep)}
+.p6 .rec b{font:400 24px 'Italiana',serif;color:var(--ink)}
+.p6-sun{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,100px);align-items:center;padding:var(--sec) var(--pad);position:relative;overflow:hidden}
+.p6-sun:before{content:"";position:absolute;width:min(70vw,780px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#F7C3A9,#F4ECDF 70%);left:-12%;top:50%;transform:translateY(-50%);opacity:.75}
+.p6-sun .arch{position:relative;aspect-ratio:3/4;max-width:440px;justify-self:end;width:100%}
+.p6-sun div{position:relative}
+.p6-sun h2{font:400 clamp(42px,5vw,76px)/1 'Italiana',serif;margin:16px 0 22px}
+.p6-sun p{font-size:16px;line-height:1.75;opacity:.75;max-width:420px;margin-bottom:32px;font-weight:300}
+.p6-eg{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.4vw,32px);text-align:center}
+.p6-eg .arch{aspect-ratio:1/1.25;margin-bottom:20px}
+.p6-eg h3{font:400 26px/1.1 'Italiana',serif;margin-bottom:8px}
+.p6-eg p{font-size:13.5px;opacity:.65;line-height:1.55;margin-bottom:14px;font-weight:300}
+@media(max-width:1000px){.p6-hero{grid-template-columns:1fr;text-align:center}.p6-hero .arch{max-width:340px;margin:0 auto;order:-1;width:100%}.p6-l{text-align:center}.p6-r p{margin-left:auto;margin-right:auto}.p6-zg{grid-template-columns:repeat(5,64vw);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}.p6-zg>*{scroll-snap-align:center}.p6-menu{grid-template-columns:1fr 1fr}.p6-dl{grid-column:1/-1;grid-row:1}.p6-menu .arch:last-child{margin-top:60px}.p6-sun{grid-template-columns:1fr}.p6-sun .arch{justify-self:center}.p6-eg{grid-template-columns:1fr 1fr}}
+
+/* P7 carta */
+.p7{--hbg:rgba(239,229,212,.94);--hline:rgba(11,42,46,.1);--wabg:var(--ink);--fab:var(--ink);--fbg:#E8DCC6;--ffg:var(--ink);--fline:rgba(11,42,46,.18);background:#EFE5D4 radial-gradient(ellipse at 20% 0,rgba(255,255,255,.55),transparent 60%);color:#1E2E2F}
+.p7-wrap{display:grid;grid-template-columns:1fr minmax(0,660px) 1fr;gap:clamp(24px,4vw,64px);padding:clamp(56px,8vw,120px) var(--pad) var(--sec)}
+.p7-letter{grid-column:2;font:400 21px/1.72 var(--serif)}
+.p7-place{font-style:italic;text-align:right;opacity:.7;margin-bottom:46px;font-size:18px}
+.p7-letter h1{font:300 clamp(46px,5.4vw,78px)/1 var(--serif);letter-spacing:-.01em}
+.p7-letter h1 em{color:var(--coral2)}
+.p7-sub{font:400 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;margin:18px 0 48px;opacity:.6}
+.p7-photo{margin:0 0 46px;background:#fff;padding:12px 12px 16px;box-shadow:0 18px 40px -22px rgba(30,46,47,.45)}
+.p7-photo .im{aspect-ratio:16/10}
+.p7-photo figcaption{font:italic 15px var(--serif);opacity:.65;margin-top:10px}
+.p7-letter p{margin-bottom:22px}
+.p7-letter h2{font:500 13px var(--sans);letter-spacing:.24em;text-transform:uppercase;margin:58px 0 20px;color:var(--coral2);scroll-margin-top:140px}
+.p7-letter a.in{color:var(--ink);border-bottom:1px solid var(--coral);font-style:italic;transition:background .3s}
+.p7-letter a.in:hover{background:rgba(232,134,106,.18)}
+.p7-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:30px 0 8px}
+.p7-cta span{font:400 13px var(--sans);opacity:.6}
+.p7-dl li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px dashed rgba(30,46,47,.25)}
+.p7-dl b{font-weight:500}
+.p7-dl em{font-size:17px;opacity:.7}
+.p7-sign{margin-top:56px}
+.p7-sign span{display:block;font:400 64px/1 'Mrs Saint Delafield',cursive;color:var(--ink);margin-top:6px}
+.p7-pd{font-size:18px;opacity:.85;margin-top:40px;padding-top:24px;border-top:1px solid rgba(30,46,47,.18)}
+.p7-mg{display:flex;flex-direction:column;gap:clamp(120px,22vw,340px);padding-top:clamp(200px,24vw,420px)}
+.p7-mg figure{background:#fff;padding:9px 9px 12px;box-shadow:0 16px 34px -20px rgba(30,46,47,.5);max-width:240px}
+.p7-mg figure:nth-child(odd){transform:rotate(-2.2deg)}.p7-mg figure:nth-child(even){transform:rotate(1.8deg);margin-left:auto}
+.p7-mg .im{aspect-ratio:4/5}
+.p7-mg figcaption{font:400 18px/1.2 'Caveat',cursive;margin-top:8px;opacity:.8}
+.p7-mg.l figure{margin-left:auto}
+@media(max-width:1100px){.p7-wrap{grid-template-columns:1fr}.p7-letter{grid-column:1;max-width:660px;margin:0 auto}.p7-mg{display:none}.p7-letter{font-size:19.5px}}
+
+/* P8 un dia */
+.p8{--hbg:rgba(244,236,223,.9);--wabg:var(--ink);--fab:var(--coral2);background:var(--sand)}
+.p8-hero{position:relative;height:calc(100svh - var(--bar) - 64px);min-height:560px;max-height:900px;overflow:hidden;display:flex;align-items:flex-end;color:#fff}
+.p8-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 66%}
+.p8-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,42,46,.78))}
+.p8-ht{position:relative;z-index:1;width:100%;padding:0 var(--pad) clamp(36px,6vh,72px);display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:end}
+.p8-ht h1{font:300 clamp(52px,7.4vw,120px)/.92 var(--serif)}
+.p8-ht p{font-size:15.5px;line-height:1.7;opacity:.9;margin-bottom:24px;font-weight:300}
+.p8-times{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+.p8-times a{font-size:12px;letter-spacing:.14em;padding:9px 14px;border:1px solid rgba(255,255,255,.5);border-radius:99px}
+.p8 .rec{background:var(--ink);color:var(--sand)}
+.p8-day{display:grid;grid-template-columns:220px 1fr;transition:background 1.4s ease,color 1.4s ease;background:#F7F3EA}
+.p8-day.dusk{background:#F8DCCB}
+.p8-day.night{background:#0B2A2E;color:var(--sand)}
+.p8-clock{position:sticky;top:calc(var(--bar) + 110px);align-self:start;padding:0 0 0 var(--pad);margin-top:var(--sec)}
+.p8-clock b{display:block;font:300 64px/1 var(--serif);font-variant-numeric:tabular-nums}
+.p8-clock small{display:block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.6;margin-top:8px}
+.p8-clock ol{margin-top:26px;display:flex;flex-direction:column;gap:10px}
+.p8-clock li{width:8px;height:8px;border-radius:50%;border:1px solid currentColor;opacity:.4;transition:.6s}
+.p8-clock li.on{background:currentColor;opacity:1}
+.p8-c{padding:var(--sec) var(--pad) var(--sec) 0;scroll-margin-top:120px}
+.p8-c>.eb{color:var(--coral2)}
+.p8-day.night .p8-c>.eb{color:var(--coral)}
+.p8-c h2{font:300 clamp(44px,5.6vw,88px)/.98 var(--serif);margin:16px 0 22px;max-width:900px}
+.p8-c>p{font-size:16.5px;line-height:1.75;max-width:560px;opacity:.8;font-weight:300}
+.p8-col{display:grid;grid-template-columns:1.1fr .8fr 1fr;gap:20px;margin:52px 0;align-items:end}
+.p8-col .im:nth-child(1){aspect-ratio:4/5}.p8-col .im:nth-child(2){aspect-ratio:3/5}.p8-col .im:nth-child(3){aspect-ratio:1}
+.p8-zs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px}
+.p8-zc{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:28px;border:1px solid currentColor;border-color:rgba(11,42,46,.18);border-radius:4px;min-height:200px;transition:background .5s}
+.p8-day.night .p8-zc{border-color:rgba(244,236,223,.22)}
+.p8-zc:hover{background:rgba(255,255,255,.35)}
+.p8-day.night .p8-zc:hover{background:rgba(244,236,223,.06)}
+.p8-zc h3{font:400 30px/1.1 var(--serif)}
+.p8-zc p{font-size:14px;opacity:.7;line-height:1.6;margin-top:8px;font-weight:300}
+.p8-zc .lnk{align-self:flex-start;color:var(--coral2)}
+.p8-day.night .p8-zc .lnk,.p8-day.night .lnk{color:var(--coral)}
+.p8-ds{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.p8-ds .im{aspect-ratio:1;margin-bottom:12px;border-radius:3px}
+.p8-ds h3{font:400 24px/1.15 var(--serif)}
+.p8-ds p{font-size:13.5px;opacity:.7;margin-top:4px}
+.p8-wide{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:52px}
+.p8-wide .im{aspect-ratio:4/5}
+.p8-wide h3{font:300 clamp(34px,3.6vw,52px)/1.02 var(--serif);margin-bottom:16px}
+.p8-wide p{font-size:15.5px;line-height:1.75;opacity:.8;margin-bottom:26px;font-weight:300}
+.p8-aw{border:1px solid rgba(244,236,223,.25);padding:30px;margin:44px 0;display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.p8-aw b{font:300 72px/1 var(--serif);color:var(--coral)}
+.p8-aw h3{font:400 30px/1.1 var(--serif)}
+.p8-aw p{font-size:14px;opacity:.7;margin-top:6px}
+.p8-ev{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.p8-ev .im{aspect-ratio:3/4;margin-bottom:12px;border-radius:3px}
+.p8-ev h3{font:400 23px/1.15 var(--serif);margin-bottom:6px}
+.p8-ev p{font-size:13px;opacity:.7;line-height:1.5;margin-bottom:12px}
+@media(max-width:1000px){.p8-ht{grid-template-columns:1fr}.p8-day{grid-template-columns:1fr}.p8-clock{position:sticky;top:calc(var(--bar) + 64px);z-index:5;margin:0;padding:12px var(--pad);display:flex;align-items:baseline;gap:14px;background:inherit;border-bottom:1px solid rgba(127,127,127,.2)}.p8-clock b{font-size:30px}.p8-clock small{margin:0}.p8-clock ol{display:none}.p8-c{padding:var(--sec) var(--pad)}.p8-ev{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.p8-col{grid-template-columns:1fr 1fr}.p8-col .im:nth-child(3){display:none}.p8-zs,.p8-wide{grid-template-columns:1fr}.p8-ds{grid-template-columns:1fr 1fr}.p8-clock{top:calc(var(--bar) + 58px)}}
+
+/* P9 dividido */
+.p9{--hbg:#fff;--hline:rgba(11,42,46,.1);--wabg:var(--coral2);--wafg:#fff;--fab:var(--coral2);--rad:2px;background:#fff}
+.p9-wrap{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+.p9-left{position:sticky;top:calc(var(--bar) + 64px);height:calc(100svh - var(--bar) - 64px);overflow:hidden;background:var(--ink)}
+.p9-imgs img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity 1.2s ease,transform 6s ease-out}
+.p9-imgs img.on{opacity:1;transform:scale(1)}
+.p9-cap{position:absolute;left:28px;bottom:24px;z-index:2;color:#fff;font-size:11px;letter-spacing:.26em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.p9-idx{position:absolute;right:28px;bottom:24px;z-index:2;color:#fff;font:300 15px var(--serif);letter-spacing:.1em}
+.p9-pn{min-height:calc(100svh - var(--bar) - 64px);padding:clamp(56px,7vw,110px) clamp(24px,5vw,90px);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid rgba(11,42,46,.08);scroll-margin-top:120px}
+.p9-pn .m{display:none}
+.p9-pn .eb{color:var(--coral2);margin-bottom:20px}
+.p9-pn h1{font:300 clamp(50px,5.8vw,96px)/.94 var(--serif);margin-bottom:24px}
+.p9-pn h2{font:300 clamp(40px,4.4vw,68px)/1 var(--serif);margin-bottom:22px}
+.p9-pn>p{font-size:16px;line-height:1.75;opacity:.75;max-width:460px;margin-bottom:30px;font-weight:300}
+.p9-zl li a,.p9-dl li{display:grid;grid-template-columns:56px 1fr auto;gap:18px;align-items:center;padding:14px 0;border-top:1px solid rgba(11,42,46,.1)}
+.p9-zl img{width:56px;height:56px;object-fit:cover;border-radius:2px}
+.p9-zl b,.p9-dl b{font:400 24px/1.1 var(--serif);display:block}
+.p9-zl small,.p9-dl small{font-size:13px;opacity:.6}
+.p9-zl .go{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral2)}
+.p9-dl li{grid-template-columns:36px 1fr}
+.p9-dl span{font:300 18px var(--serif);opacity:.5}
+.p9-rec{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.p9-rec div{border-left:2px solid var(--coral);padding-left:14px}
+.p9-rec b{display:block;font:500 17px var(--serif)}
+.p9-rec span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.55}
+.p9-ev a{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 0;border-top:1px solid rgba(11,42,46,.1)}
+.p9-ev b{font:400 26px/1.1 var(--serif)}
+.p9-ev small{display:block;font-size:13px;opacity:.6;margin-top:4px}
+.p9-ev .go{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral2);white-space:nowrap}
+@media(max-width:900px){.p9-wrap{grid-template-columns:1fr}.p9-left{display:none}.p9-pn{min-height:0}.p9-pn .m{display:block;aspect-ratio:4/3;margin:-8px 0 28px}.p9-zl .go{display:none}}
+
+/* P10 postal */
+.p10{--hbg:rgba(243,233,216,.93);--hline:rgba(11,42,46,.1);--wabg:var(--coral2);--wafg:#fff;--fab:var(--coral2);--fbg:#163B3F;background:#F3E9D8;background-image:radial-gradient(rgba(11,42,46,.05) 1px,transparent 1px);background-size:5px 5px}
+.hand{font-family:'Caveat',cursive}
+.pc{background:#fff;padding:14px;box-shadow:0 26px 50px -28px rgba(11,42,46,.55),0 2px 4px rgba(11,42,46,.08)}
+.stamp{padding:8px;background:#fff;-webkit-mask:radial-gradient(circle,#0000 3.6px,#000 4px) -6px -6px/12px 12px,linear-gradient(#000 0 0) content-box;mask:radial-gradient(circle,#0000 3.6px,#000 4px) -6px -6px/12px 12px,linear-gradient(#000 0 0) content-box}
+.p10-hero{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(20px,3vw,48px);align-items:center;padding:clamp(48px,6vw,96px) var(--pad) var(--sec)}
+.p10-front{position:relative;transform:rotate(-1.6deg)}
+.p10-front .im{aspect-ratio:5/4}
+.p10-front .im img{object-position:50% 72%}
+.p10-greet{position:absolute;left:44px;bottom:40px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.p10-greet small{display:block;font:500 11px var(--sans);letter-spacing:.36em;text-transform:uppercase}
+.p10-greet b{display:block;font:italic 400 clamp(54px,6.6vw,104px)/.9 var(--serif)}
+.p10-back{transform:rotate(1.2deg);display:grid;grid-template-columns:1.25fr 1fr;gap:26px;padding:30px;min-height:420px}
+.p10-msg{border-right:1px solid rgba(11,42,46,.18);padding-right:26px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.p10-msg h1{font:400 clamp(30px,2.8vw,44px)/1.05 var(--serif)}
+.p10-msg .hand{font-size:24px;line-height:1.25;color:#2B4E7A}
+.p10-addr{display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.p10-st{display:flex;justify-content:flex-end;position:relative}
+.p10-st .stamp{width:100px;transform:rotate(3deg)}
+.p10-st .stamp div{background:var(--ink);color:var(--sand);padding:10px 6px;text-align:center}
+.p10-st img{width:44px;height:44px;margin:0 auto 6px}
+.p10-st span{font:500 7.5px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;display:block}
+.p10-pm{position:absolute;right:58px;top:34px;width:118px;color:rgba(200,89,59,.75);transform:rotate(-14deg);pointer-events:none}
+.p10-lines p{border-bottom:1px solid rgba(11,42,46,.25);padding:8px 0 4px;font-size:21px;color:#2B4E7A}
+.p10-map{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(24px,5vw,80px);align-items:center;padding:0 var(--pad) var(--sec)}
+.p10-map h2,.p10-sh h2{font:400 clamp(40px,4.4vw,68px)/1 var(--serif)}
+.p10-map p{font-size:15.5px;line-height:1.75;opacity:.8;margin-top:18px;max-width:380px}
+.p10-map svg{width:100%;height:auto}
+.p10-sec{padding:0 var(--pad) var(--sec)}
+.p10-sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:48px}
+.p10-sh .hand{font-size:26px;color:var(--coral2)}
+.p10-zg{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(18px,3vw,40px) clamp(16px,2.6vw,36px)}
+.p10-zg .pc{grid-column:span 2;transition:transform .6s}
+.p10-zg .pc:nth-child(4),.p10-zg .pc:nth-child(5){grid-column:span 3}
+.p10-zg .pc:nth-child(odd){transform:rotate(-1.4deg)}.p10-zg .pc:nth-child(even){transform:rotate(1.2deg)}
+.p10-zg .pc:hover{transform:rotate(0) translateY(-6px)}
+.p10-zg .im{aspect-ratio:4/3;margin-bottom:14px}
+.p10-zg .k{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--coral2)}
+.p10-zg h3{font:500 26px/1.1 var(--serif);margin:4px 0}
+.p10-zg p{font-size:20px;line-height:1.2;color:#2B4E7A;margin-bottom:10px}
+.p10 .lnk{color:var(--coral2)}
+.p10-dg{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(18px,2.6vw,36px);text-align:center}
+.p10-dg .stamp{transition:transform .6s}
+.p10-dg>div:nth-child(odd) .stamp{transform:rotate(-2deg)}.p10-dg>div:nth-child(even) .stamp{transform:rotate(2deg)}
+.p10-dg .im{aspect-ratio:4/5}
+.p10-dg .aw{aspect-ratio:4/5;background:var(--coral2);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px}
+.p10-dg .aw b{font:400 54px/1 var(--serif)}
+.p10-dg .aw span{font-size:9px;letter-spacing:.2em;text-transform:uppercase;line-height:1.6;margin-top:6px}
+.p10-dg h3{font:500 21px/1.15 var(--serif);margin-top:16px}
+.p10-dg p{font-size:13px;opacity:.65;margin-top:4px}
+.p10-rec{display:flex;justify-content:center;gap:clamp(30px,8vw,120px);flex-wrap:wrap;padding:0 var(--pad) var(--sec)}
+.p10-rec div{width:200px;height:200px;border:2px solid var(--coral2);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--coral2);box-shadow:inset 0 0 0 6px #F3E9D8,inset 0 0 0 7px var(--coral2)}
+.p10-rec div:nth-child(1){transform:rotate(-8deg)}.p10-rec div:nth-child(2){transform:rotate(6deg)}
+.p10-rec b{font:500 20px/1.1 var(--serif);color:var(--ink);margin:6px 0}
+.p10-rec span{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase}
+.p10-sun{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,5vw,80px);align-items:center}
+.p10-sun .pc{transform:rotate(-1deg)}
+.p10-sun .im{aspect-ratio:16/11}
+.p10-sun .im img{object-position:50% 45%}
+.p10-sun h2{font:400 clamp(40px,4.4vw,66px)/1 var(--serif);margin-bottom:18px}
+.p10-sun .hand{font-size:26px;line-height:1.25;color:#2B4E7A;margin-bottom:26px}
+.p10-eg{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.4vw,32px)}
+.p10-eg .pc{padding:10px 10px 18px}
+.p10-eg .pc:nth-child(odd){transform:rotate(1.2deg)}.p10-eg .pc:nth-child(even){transform:rotate(-1.2deg)}
+.p10-eg .im{aspect-ratio:1;margin-bottom:12px}
+.p10-eg h3{font:500 23px/1.1 var(--serif);padding:0 6px}
+.p10-eg p{font-size:13px;opacity:.7;line-height:1.5;margin:6px 0 12px;padding:0 6px}
+.p10-eg .lnk{margin-left:6px}
+@media(max-width:1000px){.p10-hero,.p10-map,.p10-sun{grid-template-columns:1fr}.p10-zg{grid-template-columns:1fr 1fr}.p10-zg .pc,.p10-zg .pc:nth-child(4),.p10-zg .pc:nth-child(5){grid-column:auto}.p10-dg{grid-template-columns:repeat(3,1fr)}.p10-eg{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.p10-back{grid-template-columns:1fr;padding:22px}.p10-msg{border-right:0;border-bottom:1px solid rgba(11,42,46,.18);padding:0 0 22px}.p10-greet{left:24px;bottom:22px}.p10-zg,.p10-eg{grid-template-columns:1fr}.p10-dg{grid-template-columns:1fr 1fr}.p10-pm{right:40px}}
+
+/* P11 conversacion */
+.p11{--hbg:rgba(244,236,223,.93);--wabg:#1F7A5A;--wafg:#fff;--fab:#1F7A5A;background:var(--sand)}
+.p11-hero{display:grid;grid-template-columns:1fr 1fr;min-height:calc(100svh - var(--bar) - 64px)}
+.p11-pic{position:relative;overflow:hidden;color:#fff;min-height:440px}
+.p11-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 64%}
+.p11-pic:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,42,46,.8),transparent 55%)}
+.p11-pic div{position:absolute;z-index:1;left:var(--pad);right:32px;bottom:clamp(30px,6vh,64px)}
+.p11-pic h1{font:300 clamp(48px,5.8vw,92px)/.94 var(--serif);margin-top:14px}
+.p11-pic p{margin-top:14px;font-size:15px;opacity:.9;font-weight:300}
+.p11-chat{background:#E9E1D3;padding:clamp(28px,4vw,56px) clamp(16px,4vw,64px);display:flex;flex-direction:column;justify-content:center}
+.p11-top{display:flex;align-items:center;gap:12px;padding-bottom:16px;margin-bottom:18px;border-bottom:1px solid rgba(11,42,46,.12)}
+.p11-top img{width:40px;height:40px;border-radius:50%}
+.p11-top b{display:block;font:500 15px var(--sans)}
+.p11-top small{font-size:12px;opacity:.6}
+.bub{max-width:88%;background:#fff;padding:12px 15px;border-radius:4px 16px 16px 16px;font-size:15px;line-height:1.5;margin-bottom:10px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.chips button{padding:9px 14px;border-radius:99px;border:1px solid rgba(11,42,46,.25);font-size:13.5px;transition:background .3s,color .3s,border-color .3s}
+.chips button.on{background:var(--ink);color:var(--sand);border-color:var(--ink)}
+.bub.out{margin-left:auto;background:#D6F1DE;border-radius:16px 4px 16px 16px}
+.bub.out small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-bottom:4px}
+.p11-send{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:10px;flex-wrap:wrap}
+.p11-send .btn{background:#1F7A5A;color:#fff}
+.p11-send span{font-size:12.5px;opacity:.6;max-width:260px;line-height:1.5}
+.p11-sec{padding:var(--sec) var(--pad)}
+.p11-sec h2{font:300 clamp(40px,4.6vw,70px)/1 var(--serif);margin:14px 0 40px}
+.p11 .eb{color:#1F7A5A}
+.p11-ph{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.p11-ph figure{background:#fff;padding:6px;border-radius:12px}
+.p11-ph .im{aspect-ratio:1;border-radius:8px}
+.p11-ph figcaption{padding:10px 6px 6px;font-size:14px;line-height:1.4}
+.p11-ph figcaption b{display:block;font:500 19px/1.15 var(--serif)}
+.p11-ph .aw{aspect-ratio:1;border-radius:8px;background:var(--ink);color:var(--sand);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.p11-ph .aw b{font:300 56px/1 var(--serif);color:var(--coral)}
+.p11-ph .aw span{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;margin-top:8px;line-height:1.6}
+.p11 .rec{background:#fff}
+.p11-sun{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center;background:var(--ink);color:var(--sand)}
+.p11-sun .im{aspect-ratio:4/5;border-radius:12px;max-height:680px}
+.p11-sun h2{margin-bottom:20px}
+.p11-sun p{font-size:16px;line-height:1.75;opacity:.8;margin-bottom:30px;max-width:440px;font-weight:300}
+.p11-sun .eb{color:var(--sea)}
+.p11-ev{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.p11-ev a{display:block;background:#fff;border-radius:14px;padding:8px 8px 18px;transition:transform .5s}
+.p11-ev a:hover{transform:translateY(-4px)}
+.p11-ev .im{aspect-ratio:4/3;border-radius:9px;margin-bottom:14px}
+.p11-ev h3{font:500 23px/1.1 var(--serif);padding:0 10px}
+.p11-ev p{font-size:13.5px;opacity:.7;line-height:1.5;padding:6px 10px 12px}
+.p11-ev .lnk{margin-left:10px;color:#1F7A5A}
+@media(max-width:1000px){.p11-hero,.p11-sun{grid-template-columns:1fr}.p11-pic{min-height:56svh}.p11-ph{grid-template-columns:repeat(2,1fr)}.p11-ev{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.p11-ev{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="top"><b>Boca Marina<span>Propuestas de inicio</span></b><div class="tabs" id="tabs"></div></nav>
+<main id="root"></main>
+<script>
+const IC='<svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg>';
+const LOGO='/marca/logo-boca-marina.png';
+const w=m=>'https://wa.me/18296429442?text='+encodeURIComponent(m);
+const MAIN=w('Hola, quiero reservar una mesa en Boca Marina para __ personas el __');
+const SUN=w('Hola, quiero una mesa para ver el atardecer el __ para __ personas');
+const SIMPLE='Escríbenos por WhatsApp y te guardamos la mesa.';
+const Z=[
+ {n:'Mesas sobre el muelle',t:'Con el mar debajo',d:'Mesas sobre la madera, con el agua turquesa a ambos lados. La forma clásica de vivir Boca Marina.',img:'terrace-sm.webp',ph:'una mesa sobre el muelle',m:'Hola, quiero reservar una mesa sobre el muelle para __ personas el __'},
+ {n:'Camas balinesas',t:'Para quedarse la tarde',d:'Camas frente al agua para recostarte, pedir un cóctel y dejar que la tarde pase sin prisa.',img:'sea-view-sm.webp',ph:'en las camas balinesas',m:'Hola, quiero reservar en las camas balinesas para __ personas el __'},
+ {n:'El gazebo',t:'Al final del muelle',d:'El rincón más privado, donde termina el muelle y empieza el mar. Para una noche que no se olvida.',img:'propuesta-sm.webp',ph:'el gazebo',m:'Hola, quiero reservar el gazebo para __ personas el __'},
+ {n:'Terraza techada',t:'Sombra y brisa',d:'Bajo el techo de madera y las lámparas, con vista abierta al mar y resguardo del sol o la lluvia.',img:'deck-golden-sm.webp',ph:'en la terraza techada',m:'Hola, quiero reservar en la terraza techada para __ personas el __'},
+ {n:'Salón',t:'Para grupos',d:'Un espacio para reunir a la familia o al equipo, con el montaje que tu grupo necesite.',img:'mesa-larga-sm.webp',ph:'el salón',m:'Hola, quiero reservar el salón para __ personas el __'}];
+const D=[
+ {n:'Langosta Thermidor',d:'Gratinada en su concha, cremosa y dorada, servida frente al mar.',img:'thermidor-sm.webp'},
+ {n:'Chillo al estilo Boca Chica',d:'Entero y crujiente, con tostones y limón, como se come en esta playa.',img:'chillo-sm.webp'},
+ {n:'Paella de mariscos',d:'Arroz al azafrán con mariscos y langosta, para compartir en la mesa.',img:'paella-langosta-sm.webp'},
+ {n:'Pulpo a la parrilla',d:'Tierno por dentro, marcado al carbón, con aceite de oliva y hierbas.',img:'pulpo-parrilla-sm.webp'},
+ {n:'Portobello con camarones',d:'Premio del Festival Gastronómico de Santo Domingo 2005.',img:null}];
+const E=[
+ {n:'Bodas en el muelle',d:'Ceremonia frente al mar y cena para tus invitados sobre el agua.',img:'boda-arco-sm.webp',m:'Hola, quiero cotizar una boda en el muelle para __ invitados el __'},
+ {n:'Cenas románticas y pedidas de mano',d:'Mesa decorada, velas y el momento justo del atardecer. Nosotros preparamos todo.',img:'romantica-sm.webp',m:'Hola, quiero cotizar una cena romántica (o una pedida de mano) para el __'},
+ {n:'Cumpleaños',d:'Desde una mesa larga con la familia hasta una fiesta con música y brisa.',img:'cumple-tropical-sm.webp',m:'Hola, quiero cotizar un cumpleaños para __ personas el __'},
+ {n:'Corporativos',d:'Almuerzos de equipo, cenas con clientes y lanzamientos con el mar de fondo.',img:'corporativo-sm.webp',m:'Hola, quiero cotizar un evento corporativo para __ personas el __'}];
+const n2=i=>String(i+1).padStart(2,'0');
+const im=(src,alt,cls='im',extra='')=>`<div class="${cls}"><img src="${src}" alt="${alt}" loading="lazy"${extra}></div>`;
+const cot=e=>`<a class="lnk" href="${w(e.m)}">Cotizar por WhatsApp</a>`;
+const hdr=p=>`<header class="h"><a class="h-brand" href="#${p}"><img src="${LOGO}" alt=""><span>Boca Marina<small>Restaurant &amp; Lounge</small></span></a>
+<nav class="h-nav"><a href="#${p}-menu">Menú</a><a href="#${p}-zonas">Zonas</a><a href="#${p}-eventos">Eventos</a></nav>
+<div class="h-end"><span class="h-lang">ES / <a href="#${p}">EN</a></span><a class="h-tel" href="tel:+18096886810">809-688-6810</a><a class="h-wa" href="${MAIN}">${IC}<span><span class="lg">Reserva por </span>WhatsApp</span></a></div></header>`;
+const ftr=(cta=SIMPLE,btn='b-sand')=>`<footer class="f"><div class="f-cta"><p>${cta}</p><a class="btn ${btn}" href="${MAIN}">${IC}Reserva por WhatsApp</a></div>
+<div class="f-grid"><div><img src="${LOGO}" alt=""><span class="bn">Boca Marina</span><span class="bs">Restaurant &amp; Lounge</span></div>
+<div><h4>Dónde</h4><p>Prolongación Duarte 12A<br>Boca Chica, República Dominicana<br>A 20 minutos de Santo Domingo</p></div>
+<div><h4>Teléfonos</h4><p><a href="tel:+18096886810">809-688-6810</a><br><a href="tel:+18095236750">809-523-6750</a></p></div>
+<div><h4>Horario</h4><p>Todos los días desde las 10:00 a. m.<br><span class="q">(horario por confirmar)</span></p></div>
+<div><h4>Síguenos</h4><p><a href="https://www.instagram.com/bocamarina/">Instagram @bocamarina</a></p><p class="f-lang">ES / <a href="#">EN</a></p></div></div>
+<p class="f-legal">© 2026 Boca Marina Restaurant &amp; Lounge · Boca Chica, República Dominicana</p></footer>`;
+const fab=()=>`<div class="fabw"><a class="fab" href="${MAIN}">${IC.replace('class="wa"','')}Reserva por WhatsApp</a></div>`;
+const rec=()=>`<div class="rec" data-r><div><b>Travellers' Choice 2024</b><span>TripAdvisor</span></div><div><b>Festival Gastronómico de Santo Domingo</b><span>Premio 2005 · Portobello con camarones</span></div></div>`;
+const P={};
+
+P.p1=()=>`${hdr('p1')}
+<div class="p1-hero"><img class="kb" src="hero-sunset.webp" alt="El muelle de Boca Marina al atardecer">
+<div class="p1-t" data-r><p class="eb">Boca Marina · Restaurant &amp; Lounge</p><h1>Sobre el mar,<br><em>en Boca Chica</em></h1>
+<p class="l">A 20 minutos de Santo Domingo. Mariscos del día, un muelle de madera y el atardecer más lindo de la costa.</p>
+<div class="p1-cta"><a class="btn b-coral" href="${MAIN}">${IC}Reserva por WhatsApp</a><small>${SIMPLE} Sin formularios.</small></div></div>
+<div class="p1-coord">18°27′ N · 69°36′ O · Boca Chica</div></div>
+<div class="p1-lede" data-r><p>Cruzas el restaurante, el piso se vuelve madera y abajo está el mar. Aquí se come <em>con los pies sobre el agua</em> de Boca Chica.</p></div>
+${rec()}
+<section class="p1-zones" id="p1-zonas"><div class="p1-ch" data-r><h2>Elige tu escena</h2><span class="eb">Capítulo I · Los lugares</span></div>
+<div class="p1-strip">${Z.map((z,i)=>`<article class="p1-fr">${im(z.img,z.n,'im zoom')}<span class="n">${n2(i)}</span><h3>${z.n}</h3><p>${z.d}</p><a class="lnk" href="${w(z.m)}">Reservar aquí</a></article>`).join('')}</div></section>
+<section class="p1-dishes" id="p1-menu"><div class="p1-ch" data-r><h2>De la cocina</h2><span class="eb">Capítulo II · La carta</span></div>
+${D.slice(0,4).map((d,i)=>`<div class="p1-dish" data-r>${im(d.img,d.n,'im zoom')}<div><span class="n">${n2(i)}</span><h3>${d.n}</h3><p>${d.d}</p></div></div>`).join('')}
+<div class="p1-award" data-r><span class="y">2005</span><div><span class="eb" style="color:var(--coral)">Plato premiado</span><h3>Portobello con camarones</h3><p>Premio del Festival Gastronómico de Santo Domingo. Sigue en la carta, igual que el primer día.</p></div></div></section>
+<section class="p1-sun"><img class="kb" src="coctel-sunset.webp" alt="Cóctel frente al atardecer en Boca Chica" loading="lazy"><div data-r><span class="eb">Capítulo III · La hora dorada</span><h2>A las seis y pico, todo se detiene.</h2><p>El sol baja sobre la bahía y el muelle entero se pone dorado. Pide un cóctel, busca tu sitio y guarda el teléfono un rato.</p><a class="btn b-sand" href="${SUN}">${IC}Reserva para el atardecer</a></div></section>
+<section class="p1-events" id="p1-eventos"><div class="p1-ch" data-r><h2>Celebra sobre el agua</h2><span class="eb">Capítulo IV · Eventos</span></div>
+<div class="p1-ev">${E.map(e=>`<article data-r>${im(e.img,e.n,'im zoom')}<h3>${e.n}</h3><p>${e.d}</p>${cot(e)}</article>`).join('')}</div></section>
+${ftr('Sobre el mar, en Boca Chica. '+SIMPLE,'b-coral')}${fab()}`;
+
+P.p2=()=>`${hdr('p2')}
+<div class="p2-hero" id="p2-zonas"><div class="p2-pic"><img class="kb" src="hero-sunset.webp" alt="El muelle de Boca Marina al atardecer"><div data-r><span class="eb">Boca Chica · a 20 minutos de Santo Domingo</span><h1>Sobre el mar,<br>en Boca Chica</h1><p>Mariscos, cócteles y atardeceres sobre un muelle de madera.</p></div></div>
+<div class="p2-ch"><span class="eb">Primero lo importante</span><h2>¿Dónde te sentamos?</h2>
+<div class="p2-list">${Z.map((z,i)=>`<button data-p2="${i}" class="${i?'':'on'}"><span>${n2(i)}</span><b>${z.n}</b><em>${z.t}</em></button>`).join('')}</div>
+<div class="p2-prev">${im(Z[0].img,'','im',' id="p2-img"')}<p id="p2-d">${Z[0].d}</p></div>
+<div><a class="btn b-ink" id="p2-go" href="${w(Z[0].m)}">${IC}<span id="p2-gl">Reservar ${Z[0].ph}</span></a></div>
+<p class="p2-note">${SIMPLE} Te abrimos WhatsApp con el mensaje listo; solo completa personas y fecha. También puedes llamar al 809-688-6810.</p></div></div>
+${rec()}
+<section class="p2-map"><div data-r><span class="eb" style="color:var(--coral2)">El muelle desde arriba</span><h2>Cinco lugares, un solo mar</h2><p>Toca un punto del mapa para ver cada espacio. Desde el gazebo al final del muelle hasta el salón para grupos, todos miran al agua.</p></div>
+<div class="p2-aer" data-r><img src="aerial.webp" alt="Vista aérea del muelle de Boca Marina" loading="lazy">${[[52,70],[36,61],[27,79],[58,50],[67,33]].map((p,i)=>`<button class="p2-pin${i?'':' on'}" data-p2="${i}" style="left:${p[0]}%;top:${p[1]}%" aria-label="${Z[i].n}">${i+1}</button>`).join('')}</div></section>
+<section class="p2-sec" id="p2-menu"><div class="p2-head" data-r><h2>Lo que sale de la cocina</h2><a class="lnk" href="${MAIN}">Ver la carta completa</a></div>
+<div class="p2-dishes">${D.map(d=>`<article data-r>${d.img?im(d.img,d.n,'im zoom'):`<div class="p2-aw"><b>2005</b><span>Premio Festival Gastronómico<br>de Santo Domingo</span></div>`}<h3>${d.n}</h3><p>${d.img?d.d:'El plato premiado de la casa.'}</p></article>`).join('')}</div></section>
+<section class="p2-sun">${im('coctel-sunset.webp','Cóctel al atardecer','im')}<div data-r><span class="eb">Todos los días</span><h2>Llega antes de las seis</h2><p>El mejor sitio para ver el atardecer se llena primero. Pídelo por WhatsApp y te lo tenemos listo.</p><a class="btn b-ink" href="${SUN}">${IC}Quiero ver el atardecer</a></div></section>
+<section class="p2-sec" id="p2-eventos"><div class="p2-head" data-r><h2>¿Celebras algo?</h2><span class="eb">Cotiza por WhatsApp</span></div>
+<div class="p2-ev">${E.map(e=>`<a href="${w(e.m)}" data-r>${im(e.img,e.n)}<div><h3>${e.n}</h3><p>${e.d}</p><span class="lnk">Cotizar por WhatsApp</span></div></a>`).join('')}</div></section>
+${ftr()}${fab()}`;
+
+P.p3=()=>`${hdr('p3')}
+<div class="p3-hero"><p class="p3-k" data-r>Boca Marina — Restaurant &amp; Lounge — Boca Chica</p><h1 data-r>Sobre el mar,<br><em>en Boca Chica.</em></h1>
+<div class="p3-hrow" data-r>${im('hero-sunset-sm.webp','El muelle al atardecer')}<dl><dt>Dónde</dt><dd>Prolongación Duarte 12A</dd><dt>Desde</dt><dd>A 20 minutos de Santo Domingo</dd><dt>Cuándo</dt><dd>Todos los días</dd><dt>Qué</dt><dd>Mariscos, cócteles, atardecer</dd></dl>
+<div class="p3-cta"><p>${SIMPLE} Es la forma más simple: un mensaje y listo.</p><a class="btn b-ink" href="${MAIN}">${IC}Reserva por WhatsApp</a><span class="tel">o llama al 809-688-6810</span></div></div></div>
+<section class="p3-sec" id="p3-zonas"><div class="p3-lab">01<span>Lugares</span></div><ol class="p3-rows">${Z.map(z=>`<li><a href="${w(z.m)}"><span class="n">${z.n}</span><span class="d">${z.d}</span><span class="go">Reservar ↗</span><img src="${z.img}" alt="" loading="lazy"></a></li>`).join('')}</ol></section>
+<section class="p3-sec p3-menu" id="p3-menu"><div class="p3-lab">02<span>Cocina</span></div><ol class="p3-rows">${D.map(d=>`<li><div><span class="n">${d.n}</span><span class="d">${d.img?d.d:''}${d.img?'':'<span class="p3-tag">Premio 2005</span>'}</span><span class="go"></span></div></li>`).join('')}</ol></section>
+<section class="p3-sec"><div class="p3-lab">03<span>Reconocimientos</span></div><div class="p3-rec" data-r><div><b>Travellers' Choice 2024</b><span>TripAdvisor</span></div><div><b>Festival Gastronómico de Santo Domingo</b><span>Premio 2005, Portobello con camarones</span></div></div></section>
+<section class="p3-sec"><div class="p3-lab">04<span>Atardecer</span></div><div><p class="p3-big" data-r>Cada tarde el sol baja sobre la bahía y el muelle se pone <em>dorado.</em> Es la mejor hora para estar aquí.</p>
+<div class="p3-sunrow" data-r>${im('coctel-sunset.webp','Cóctel al atardecer')}<p>Pide una mesa para el atardecer y llega con tiempo. <a class="lnk" href="${SUN}">Reservar el atardecer</a></p></div></div></section>
+<section class="p3-sec" id="p3-eventos"><div class="p3-lab">05<span>Celebrar</span></div><ol class="p3-rows">${E.map(e=>`<li><a href="${w(e.m)}"><span class="n">${e.n}</span><span class="d">${e.d}</span><span class="go">Cotizar por WhatsApp ↗</span><img src="${e.img}" alt="" loading="lazy"></a></li>`).join('')}</ol></section>
+${ftr(SIMPLE,'b-ink')}${fab()}`;
+
+P.p4=()=>`${hdr('p4')}
+<div class="p4-mast"><span>Edición Boca Chica</span><div class="lg">Boca <i>Marina</i></div><span>Sobre el mar · 2026</span></div>
+<div class="p4-cover"><figure data-r>${im('hero-sunset.webp','El muelle al atardecer','im zoom')}<figcaption>En portada: el muelle de Boca Marina, cuando el sol toca el agua.</figcaption></figure>
+<div class="p4-cl" data-r><h2>Sobre el mar, <i>en Boca Chica</i></h2><p class="p4-dek">A 20 minutos de Santo Domingo hay un muelle de madera donde se come langosta mirando el agua. Esta es su historia, en cuatro partes.</p>
+<ol class="p4-toc"><li><b>04</b>Dónde sentarse: cinco lugares sobre el agua</li><li><b>12</b>La carta en cinco platos, uno de ellos premiado</li><li><b>20</b>El atardecer, minuto a minuto</li><li><b>26</b>Bodas, pedidas y otras celebraciones</li></ol>
+<a class="btn b-deep" href="${MAIN}">${IC}Reserva por WhatsApp</a><p class="p4-small">${SIMPLE} Teléfono: 809-688-6810.</p></div></div>
+<article class="p4-feat"><h3>Crónica · Boca Chica</h3><div class="p4-cols" data-r><p>Boca Chica se conoce por su playa de aguas tranquilas, protegida por el arrecife. Al final de la Prolongación Duarte, el restaurante se adelanta sobre el mar con un muelle de madera, y ahí empieza otra cosa.</p><p>Al mediodía el agua es turquesa y la gente se baña al lado de las mesas. Por la tarde llegan los cócteles y las camas balinesas se llenan. Cuando cae el sol, el muelle se pone dorado y nadie mira el teléfono.</p><p>Reservar es fácil a propósito: no hay formularios ni cuentas que crear. Escribes por WhatsApp, dices cuántos son y qué día, y te guardan la mesa.</p></div>
+<blockquote class="p4-pq" data-r>“Aquí se come con los pies sobre el agua.”<small>Boca Marina, Boca Chica</small></blockquote></article>
+${rec()}
+<section class="p4-sec" id="p4-zonas"><div class="p4-sh" data-r><span>04</span><h2>Dónde sentarse</h2><p>Cada lugar, su propio plan</p></div>
+<div class="p4-zg">${Z.map((z,i)=>`<article class="p4-z" data-r>${im(z.img,z.n,'im zoom')}<span class="k">Lugar ${n2(i)}</span><h3>${z.n}</h3><p>${z.d}</p><a class="lnk" href="${w(z.m)}">Reservar por WhatsApp</a></article>`).join('')}</div></section>
+<section class="p4-sec" id="p4-menu"><div class="p4-sh" data-r><span>12</span><h2>La carta en cinco platos</h2><p>Sin precios: la carta completa, en el restaurante</p></div>
+<div class="p4-dg">${D.slice(0,4).map((d,i)=>`<article class="p4-d" data-r>${im(d.img,d.n,'im zoom')}<b>${n2(i)}</b><h3>${d.n}</h3><p>${d.d}</p></article>`).join('')}
+<aside class="p4-box" data-r><span class="eb">Premiado</span><h3>Portobello con camarones</h3><p>El plato que ganó el Festival Gastronómico de Santo Domingo en 2005.</p><hr><ul><li>Travellers' Choice 2024, TripAdvisor</li><li>Festival Gastronómico de Santo Domingo, 2005</li></ul></aside></div></section>
+<section class="p4-sec"><div class="p4-sh" data-r><span>20</span><h2>El atardecer, minuto a minuto</h2><p>Hora aproximada, según la época del año</p></div>
+<div class="p4-sun"><figure data-r>${im('coctel-sunset.webp','Cóctel frente al atardecer','im')}<figcaption>Un cóctel de la casa, justo antes de que el sol toque el agua.</figcaption></figure>
+<div data-r><ol class="p4-tl"><li><b>17:30</b>Llegas, te sientas sobre el muelle y pides algo fresco.</li><li><b>18:00</b>La luz se vuelve naranja y el agua se pone de cobre.</li><li><b>18:20</b>El sol toca el horizonte. Todo el muelle mira hacia el mismo lado.</li><li><b>18:40</b>Se encienden las lámparas y empieza la cena.</li></ol><p style="margin-top:28px"><a class="btn b-deep" href="${SUN}">${IC}Reserva para el atardecer</a></p></div></div></section>
+<section class="p4-sec" id="p4-eventos"><div class="p4-sh" data-r><span>26</span><h2>Agenda de celebraciones</h2><p>Cotiza tu fecha por WhatsApp</p></div>
+<div class="p4-eg">${E.map(e=>`<article data-r>${im(e.img,e.n,'im zoom')}<h3>${e.n}</h3><p>${e.d}</p>${cot(e)}</article>`).join('')}</div></section>
+${ftr('Fin de la edición. '+SIMPLE,'b-deep')}${fab()}`;
+
+P.p5=()=>`${hdr('p5')}
+<div class="p5-hero"><img class="a kb" src="hero-sunset.webp" alt="El muelle de Boca Marina al atardecer"><img class="b" src="hero-night-sm.webp" alt="" aria-hidden="true">
+<div class="p5-ht" data-r><div class="p5-orn">Restaurant &amp; Lounge</div><h1>Sobre el mar,<br><em>en Boca Chica</em></h1><p>Del atardecer a la medianoche<br>A 20 minutos de Santo Domingo</p>
+<a class="btn b-gold" href="${MAIN}">${IC}Reserva por WhatsApp</a><span class="p5-tel">${SIMPLE} · 809-688-6810</span></div></div>
+${rec()}
+<section class="p5-sec" id="p5-zonas"><div class="p5-sh" data-r><div class="p5-orn">Los lugares</div><h2>Cada noche, tu rincón</h2></div>
+${Z.map((z,i)=>`<div class="p5-z" data-r><span class="n">${n2(i)}</span><h3>${z.n}</h3><div><p>${z.d}</p><a class="lnk" href="${w(z.m)}">Reservar por WhatsApp</a></div>${im(z.img,z.n,'im zoom')}</div>`).join('')}</section>
+<section class="p5-sec" id="p5-menu" style="padding-top:0"><div class="p5-sh" data-r><div class="p5-orn">La carta</div><h2>Platos de la casa</h2></div>
+<div class="p5-menu">${im('thermidor-sm.webp','Langosta Thermidor','im zoom')}<ol class="p5-dl" data-r>${D.map(d=>`<li><h3>${d.n}</h3><p>${d.img?d.d:'El plato premiado de la casa.'}</p>${d.img?'':'<span class="aw">Premio Festival Gastronómico de Santo Domingo 2005</span>'}</li>`).join('')}</ol></div></section>
+<section class="p5-sun">${im('hero-night-sm.webp','El muelle iluminado de noche','im')}<div data-r><div class="p5-orn" style="justify-content:flex-start">La hora dorada</div><h2>Primero el atardecer,<br><em>después la noche.</em></h2><p>Llega con la última luz, quédate cuando se encienden las lámparas sobre el muelle. Te guardamos la mejor mesa para ver cómo cambia el cielo.</p><a class="btn b-gold" href="${SUN}">${IC}Reserva para el atardecer</a></div></section>
+<section class="p5-sec" id="p5-eventos"><div class="p5-sh" data-r><div class="p5-orn">Celebraciones</div><h2>Noches para recordar</h2></div>
+<div class="p5-ev">${E.map(e=>`<a href="${w(e.m)}" data-r><img src="${e.img}" alt="${e.n}" loading="lazy"><div><h3>${e.n}</h3><p>${e.d}</p><span class="lnk">Cotizar por WhatsApp</span></div></a>`).join('')}</div></section>
+${ftr('Sobre el mar, <em>de noche.</em> '+SIMPLE,'b-gold')}${fab()}`;
+
+const WAVE='<svg class="p6-wave" viewBox="0 0 140 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8c8-8 16-8 24 0s16 8 24 0 16-8 24 0 16 8 24 0 16-8 24 0 8 6 14 4"/></svg>';
+P.p6=()=>`${hdr('p6')}
+<div class="p6-hero"><div class="p6-l" data-r><span class="eb">Boca Chica · República Dominicana</span><h1>Sobre<br>el mar,</h1></div>
+<div class="arch"><img class="kb" src="hero-sunset-sm.webp" alt="El muelle de Boca Marina al atardecer" style="width:100%;height:100%;object-fit:cover"></div>
+<div class="p6-r" data-r><h1>en Boca<br>Chica</h1><p>A 20 minutos de Santo Domingo. Mariscos, sal y luz sobre un muelle de madera.</p><a class="btn" style="background:var(--deep);color:#fff" href="${MAIN}">${IC}Reserva por WhatsApp</a><span class="tel">${SIMPLE}</span></div></div>
+<div class="p6-intro" data-r>${WAVE}<p>Almuerzos largos, agua turquesa y una brisa que no se va. Aquí el día se mide por el color del mar.</p></div>
+<section class="p6-sec" id="p6-zonas" style="padding-top:0"><div class="p6-sh" data-r><span class="eb">Los lugares</span><h2>Elige tu lugar</h2></div>
+<div class="p6-zg">${Z.map(z=>`<article data-r>${im(z.img,z.n,'arch zoom')}<h3>${z.n}</h3><p>${z.d}</p><a class="lnk" href="${w(z.m)}">Reservar</a></article>`).join('')}</div></section>
+<section class="p6-sec p6-menu" id="p6-menu">${im('thermidor-sm.webp','Langosta Thermidor','arch zoom')}<div><div class="p6-sh" style="margin-bottom:30px" data-r><span class="eb">La cocina</span><h2>Del mar a tu mesa</h2></div><ol class="p6-dl" data-r>${D.map(d=>`<li><h3>${d.n}</h3><p>${d.img?d.d:'El plato premiado de la casa.'}</p>${d.img?'':'<span class="aw">Festival Gastronómico de Santo Domingo 2005</span>'}</li>`).join('')}</ol></div>${im('paella-langosta-sm.webp','Paella de mariscos','arch zoom')}</section>
+${rec()}
+<section class="p6-sun"><div data-r><span class="eb" style="color:var(--coral2)">Todos los días</span><h2>Cuando el sol toca el agua</h2><p>Al final de la tarde la luz se vuelve miel y el muelle entero mira hacia el mismo lado. Ven con tiempo: es el mejor momento del día.</p><a class="btn" style="background:var(--deep);color:#fff" href="${SUN}">${IC}Reserva para el atardecer</a></div>${im('coctel-sunset.webp','Cóctel al atardecer','arch')}</section>
+<section class="p6-sec" id="p6-eventos" style="background:#fff"><div class="p6-sh" data-r><span class="eb">Celebraciones</span><h2>Tu día, frente al mar</h2></div>
+<div class="p6-eg">${E.map(e=>`<article data-r>${im(e.img,e.n,'arch zoom')}<h3>${e.n}</h3><p>${e.d}</p>${cot(e)}</article>`).join('')}</div></section>
+${ftr(SIMPLE,'b-ink')}${fab()}`;
+
+const za=(i,txt)=>`<a class="in" href="${w(Z[i].m)}">${txt}</a>`;
+P.p7=()=>`${hdr('p7')}
+<div class="p7-wrap"><div class="p7-mg l">${[['spritz-sm.webp','La tarde empieza así'],['camarones-ajillo-sm.webp','Camarones al ajillo'],['bienvenida-sm.webp','Mesa lista para un grupo']].map(f=>`<figure data-r>${im(f[0],f[1])}<figcaption>${f[1]}</figcaption></figure>`).join('')}</div>
+<div class="p7-letter"><p class="p7-place">Boca Chica, República Dominicana</p>
+<figure class="p7-photo" data-r>${im('hero-sunset.webp','El muelle al atardecer','im')}<figcaption>El muelle, poco antes de las seis y media.</figcaption></figure>
+<h1>Sobre el mar, <em>en Boca Chica</em></h1><p class="p7-sub">A 20 minutos de Santo Domingo</p>
+<p>Querido amigo, querida amiga:</p>
+<p>Gracias por pasar por aquí. Antes de contarte qué cocinamos, te cuento dónde: al final de la Prolongación Duarte, en Boca Chica, sobre un muelle de madera con el mar debajo. Así de simple, y así de especial.</p>
+<p>Si quieres venir, no tienes que llenar nada. ${SIMPLE} Nos dices cuántos son y qué día, y listo.</p>
+<div class="p7-cta"><a class="btn b-ink" href="${MAIN}">${IC}Reserva por WhatsApp</a><span>o llámanos al 809-688-6810</span></div>
+<h2 id="p7-zonas">Dónde sentarte</h2>
+<p>Si es tu primera vez, pide ${za(0,'una mesa sobre el muelle')}: es lo que la mayoría recuerda. Si vienes a pasar la tarde, ${za(1,'las camas balinesas')} son para eso, con un cóctel y sin reloj.</p>
+<p>Para dos, y si la noche es importante, reserva ${za(2,'el gazebo')}, al final del muelle. Si hace mucho sol o amenaza lluvia, ${za(3,'la terraza techada')} tiene la misma vista. Y si vienen muchos, tenemos ${za(4,'el salón')} para ustedes.</p>
+<h2 id="p7-menu">Lo que yo pediría</h2>
+<ol class="p7-dl">${D.map(d=>`<li><b>${d.n}</b><em>${d.img?['la de siempre','como en la playa','para compartir','al carbón'][D.indexOf(d)]:'premiado en 2005'}</em></li>`).join('')}</ol>
+<p style="margin-top:22px">El Portobello con camarones ganó el Festival Gastronómico de Santo Domingo en 2005, y lo seguimos haciendo igual.</p>
+<h2>A la hora del atardecer</h2>
+<p>Ven antes de las seis. El sol baja sobre la bahía, el muelle se pone dorado y por unos minutos nadie habla. Si quieres verlo desde la mejor mesa, ${`<a class="in" href="${SUN}">avísanos con tiempo</a>`}.</p>
+<h2 id="p7-eventos">Si vienes a celebrar algo</h2>
+${E.map(e=>`<p><b>${e.n}.</b> ${e.d} <a class="in" href="${w(e.m)}">Cotizar por WhatsApp</a></p>`).join('')}
+<p class="p7-sign">Con cariño,<span>la familia de Boca Marina</span></p>
+<p class="p7-pd">P. D.: En 2024 nuestros visitantes nos dieron el Travellers' Choice de TripAdvisor. Gracias a cada uno; nos tomamos en serio que vuelvas.</p></div>
+<div class="p7-mg">${[['romantica-sm.webp','Para una pedida de mano'],['canoa-mariscos-sm.webp','La canoa de mariscos'],['lambi-sm.webp','Lambí, como debe ser']].map(f=>`<figure data-r>${im(f[0],f[1])}<figcaption>${f[1]}</figcaption></figure>`).join('')}</div></div>
+${ftr('Te esperamos sobre el mar. '+SIMPLE,'b-ink')}${fab()}`;
+
+const zc=i=>`<a class="p8-zc" href="${w(Z[i].m)}" data-r><div><h3>${Z[i].n}</h3><p>${Z[i].d}</p></div><span class="lnk">Reservar por WhatsApp</span></a>`;
+const ds=a=>`<div class="p8-ds">${a.map(i=>`<article data-r>${im(D[i].img,D[i].n,'im zoom')}<h3>${D[i].n}</h3><p>${D[i].d}</p></article>`).join('')}</div>`;
+P.p8=()=>`${hdr('p8')}
+<div class="p8-hero"><img class="kb" src="hero-sunset.webp" alt="El muelle de Boca Marina al atardecer"><div class="p8-ht"><div data-r><span class="eb">Un día en Boca Marina</span><h1>Sobre el mar,<br>en Boca Chica</h1></div>
+<div data-r><p>A 20 minutos de Santo Domingo. Del almuerzo al último cóctel, cada hora tiene su lugar. ${SIMPLE}</p><a class="btn b-coral" href="${MAIN}">${IC}Reserva por WhatsApp</a><div class="p8-times"><a href="#p8-zonas">12:00 Mediodía</a><a href="#p8-menu">18:15 Atardecer</a><a href="#p8-eventos">21:30 Noche</a></div></div></div></div>
+${rec()}
+<div class="p8-day" id="p8-day"><aside class="p8-clock"><b id="p8-h">12:00</b><small id="p8-l">Mediodía</small><ol><li class="on"></li><li></li><li></li></ol></aside><div>
+<section class="p8-c" id="p8-zonas" data-h="12:00" data-l="Mediodía" data-c=""><span class="eb">12:00 · Mediodía</span><h2>El agua está turquesa y el almuerzo no tiene prisa</h2><p>A esta hora la gente se baña al lado del muelle. Pide algo fresco, busca sombra o recuéstate frente al mar.</p>
+<div class="p8-col">${im('sea-view-sm.webp','El mar junto al muelle','im zoom')}${im('spritz-sm.webp','Spritz sobre el muelle','im zoom')}${im('ceviche-coctel-sm.webp','Ceviche','im zoom')}</div>
+<div class="p8-zs">${zc(1)}${zc(3)}</div>${ds([1,2,3])}</section>
+<section class="p8-c" id="p8-menu" data-h="18:15" data-l="Atardecer" data-c="dusk"><span class="eb">18:15 · Atardecer</span><h2>El sol baja y el muelle se pone dorado</h2><p>El momento por el que muchos vienen. Una mesa sobre el muelle, un cóctel y la langosta de la casa.</p>
+<div class="p8-wide">${im('coctel-sunset.webp','Cóctel al atardecer','im')}<div data-r><h3>La hora dorada</h3><p>Llega antes de las seis para tener la mejor vista. Te guardamos la mesa si nos escribes antes.</p><a class="btn b-ink" href="${SUN}">${IC}Reserva para el atardecer</a></div></div>
+<div class="p8-zs" style="margin-top:52px">${zc(0)}<article class="p8-zc" data-r style="border:0;padding:0">${im('thermidor-sm.webp','Langosta Thermidor','im zoom')}</article></div>
+<p style="font-size:15px;opacity:.75"><b style="font:400 26px var(--serif)">Langosta Thermidor.</b> ${D[0].d}</p></section>
+<section class="p8-c" id="p8-eventos" data-h="21:30" data-l="Noche" data-c="night"><span class="eb">21:30 · Noche</span><h2>Se encienden las lámparas y empieza la celebración</h2><p>Cenas para dos en el gazebo, grupos en el salón y celebraciones sobre el agua.</p>
+<div class="p8-col">${im('hero-night-sm.webp','El muelle de noche','im zoom')}${im('propuesta-sm.webp','El gazebo preparado para una pedida','im zoom')}${im('canoa-mariscos-sm.webp','Canoa de mariscos','im zoom')}</div>
+<div class="p8-zs">${zc(2)}${zc(4)}</div>
+<div class="p8-aw" data-r><b>2005</b><div><h3>Portobello con camarones</h3><p>Premio del Festival Gastronómico de Santo Domingo.</p></div></div>
+<div class="p8-ev">${E.map(e=>`<article data-r>${im(e.img,e.n,'im zoom')}<h3>${e.n}</h3><p>${e.d}</p>${cot(e)}</article>`).join('')}</div></section></div></div>
+${ftr('Del mediodía a la noche. '+SIMPLE,'b-coral')}${fab()}`;
+
+const P9=[['hero-sunset.webp','El muelle al atardecer'],['aerial.webp','El muelle desde arriba'],['thermidor-sm.webp','Langosta Thermidor'],['coctel-sunset.webp','La hora dorada'],['boda-arco-sm.webp','Boda en el muelle'],['hero-night-sm.webp','De noche']];
+const p9m=k=>im(P9[k][0],P9[k][1],'m im');
+P.p9=()=>`${hdr('p9')}
+<div class="p9-wrap"><div class="p9-left"><div class="p9-imgs">${P9.map((p,i)=>`<img src="${p[0]}" alt="${p[1]}" data-k="${i}"${i?' loading="lazy"':' class="on"'}>`).join('')}${Z.map((z,i)=>`<img src="${z.img}" alt="${z.n}" data-z="${i}" loading="lazy">`).join('')}</div><span class="p9-cap" id="p9-cap">${P9[0][1]}</span><span class="p9-idx" id="p9-idx">01 / 06</span></div>
+<div class="p9-right">
+<div class="p9-pn" data-k="0">${p9m(0)}<span class="eb">Boca Chica · República Dominicana</span><h1>Sobre el mar, en Boca Chica</h1><p>A 20 minutos de Santo Domingo. Un muelle de madera, mariscos del día y el atardecer de frente. ${SIMPLE}</p><div><a class="btn b-deep" href="${MAIN}">${IC}Reserva por WhatsApp</a></div><div class="p9-rec"><div><b>Travellers' Choice 2024</b><span>TripAdvisor</span></div><div><b>Festival Gastronómico 2005</b><span>Santo Domingo</span></div></div></div>
+<div class="p9-pn" data-k="1" id="p9-zonas">${p9m(1)}<span class="eb">Los lugares</span><h2>Elige dónde sentarte</h2><ol class="p9-zl">${Z.map((z,i)=>`<li><a href="${w(z.m)}" data-z="${i}"><img src="${z.img}" alt="" loading="lazy"><div><b>${z.n}</b><small>${z.t}</small></div><span class="go">Reservar</span></a></li>`).join('')}</ol></div>
+<div class="p9-pn" data-k="2" id="p9-menu">${p9m(2)}<span class="eb">La cocina</span><h2>Cinco platos para empezar</h2><ol class="p9-dl">${D.map((d,i)=>`<li><span>${n2(i)}</span><div><b>${d.n}</b><small>${d.d}</small></div></li>`).join('')}</ol></div>
+<div class="p9-pn" data-k="3">${p9m(3)}<span class="eb">La hora dorada</span><h2>El atardecer, desde el agua</h2><p>Cada tarde el sol baja sobre la bahía y el muelle se pone dorado. Pide tu mesa con tiempo: la primera fila se llena primero.</p><div><a class="btn b-ink" href="${SUN}">${IC}Reserva para el atardecer</a></div></div>
+<div class="p9-pn" data-k="4" id="p9-eventos">${p9m(4)}<span class="eb">Celebraciones</span><h2>Celebra sobre el agua</h2><div class="p9-ev">${E.map(e=>`<a href="${w(e.m)}"><div><b>${e.n}</b><small>${e.d}</small></div><span class="go">Cotizar por WhatsApp</span></a>`).join('')}</div></div>
+<div class="p9-pn" data-k="5">${p9m(5)}<span class="eb">Visítanos</span><h2>Prolongación Duarte 12A, Boca Chica</h2><p>Todos los días desde las 10:00 a. m. (horario por confirmar). Teléfonos 809-688-6810 y 809-523-6750.</p><div><a class="btn b-deep" href="${MAIN}">${IC}Reserva por WhatsApp</a></div></div>
+</div></div>${ftr()}${fab()}`;
+
+const PM='<svg class="p10-pm" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="pmc" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="60" r="34" fill="none" stroke="currentColor" stroke-width="1.2"/><text font-family="Jost" font-size="9.5" letter-spacing="2.4" fill="currentColor"><textPath href="#pmc">BOCA CHICA · REP. DOMINICANA ·</textPath></text><text x="60" y="57" text-anchor="middle" font-family="Jost" font-size="9" fill="currentColor" letter-spacing="1.5">SOBRE</text><text x="60" y="70" text-anchor="middle" font-family="Jost" font-size="9" fill="currentColor" letter-spacing="1.5">EL MAR</text></svg>';
+const MAP=`<svg viewBox="0 0 640 300" role="img" aria-label="Mapa de Santo Domingo a Boca Chica"><path d="M0 150 C60 140 110 175 170 168 S260 150 320 172 S430 200 480 186 S580 168 640 182 V300 H0Z" fill="#7FCFCB" opacity=".35"/><path d="M0 150 C60 140 110 175 170 168 S260 150 320 172 S430 200 480 186 S580 168 640 182" fill="none" stroke="#0B2A2E" stroke-width="1.4"/>
+<g fill="none" stroke="#2F7C86" stroke-width="1" opacity=".6"><path d="M60 220c12-6 24-6 36 0s24 6 36 0"/><path d="M300 245c12-6 24-6 36 0s24 6 36 0"/><path d="M500 230c12-6 24-6 36 0s24 6 36 0"/></g>
+<path d="M150 140 C240 100 380 110 470 160" fill="none" stroke="#C8593B" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+<circle cx="150" cy="140" r="6" fill="#0B2A2E"/><circle cx="470" cy="160" r="9" fill="#C8593B"/><circle cx="470" cy="160" r="16" fill="none" stroke="#C8593B" stroke-width="1"/>
+<text x="150" y="118" text-anchor="middle" font-family="Jost" font-size="12" letter-spacing="2" fill="#0B2A2E">SANTO DOMINGO</text><text x="470" y="134" text-anchor="middle" font-family="Jost" font-size="12" letter-spacing="2" fill="#0B2A2E">BOCA CHICA</text>
+<text x="310" y="98" text-anchor="middle" font-family="Caveat" font-size="30" fill="#C8593B">20 minutos</text><text x="560" y="270" font-family="Caveat" font-size="22" fill="#2B4E7A">Mar Caribe</text></svg>`;
+P.p10=()=>`${hdr('p10')}
+<div class="p10-hero"><div class="pc p10-front" data-r>${im('hero-sunset.webp','El muelle de Boca Marina al atardecer','im')}<p class="p10-greet"><small>Saludos desde</small><b>Boca Chica</b></p></div>
+<div class="pc p10-back" data-r><div class="p10-msg"><h1>Sobre el mar, en Boca Chica</h1><p class="hand">A 20 minutos de Santo Domingo hay un muelle donde el agua es turquesa y la langosta sale gratinada. Ven a verlo. Escríbenos por WhatsApp y te guardamos la mesa.</p><div><a class="btn b-deep" href="${MAIN}">${IC}Reserva por WhatsApp</a></div></div>
+<div class="p10-addr"><div class="p10-st"><div class="stamp"><div><img src="${LOGO}" alt=""><span>Boca Marina<br>Correo del mar</span></div></div>${PM}</div><div class="p10-lines hand"><p>Para: ti y los tuyos</p><p>Prolongación Duarte 12A</p><p>Boca Chica, R. D.</p><p>809-688-6810</p></div></div></div></div>
+<section class="p10-map"><div data-r><span class="eb" style="color:var(--coral2)">Cómo llegar</span><h2 style="margin-top:14px">Más cerca de lo que crees</h2><p>Sales de Santo Domingo por la autopista de Las Américas y en 20 minutos estás sentado sobre el mar.</p></div><div data-r>${MAP}</div></section>
+<section class="p10-sec" id="p10-zonas"><div class="p10-sh" data-r><h2>Elige tu postal</h2><span class="hand">cinco lugares sobre el agua</span></div>
+<div class="p10-zg">${Z.map((z,i)=>`<article class="pc" data-r>${im(z.img,z.n,'im')}<span class="k">Lugar ${n2(i)}</span><h3>${z.n}</h3><p class="hand">${z.t.toLowerCase()}</p><a class="lnk" href="${w(z.m)}">Reservar por WhatsApp</a></article>`).join('')}</div></section>
+<section class="p10-sec" id="p10-menu"><div class="p10-sh" data-r><h2>La colección de la cocina</h2><span class="hand">sellos de la casa</span></div>
+<div class="p10-dg">${D.map(d=>`<div data-r><div class="stamp">${d.img?im(d.img,d.n):`<div class="aw"><b>2005</b><span>Premio Festival<br>Gastronómico<br>de Santo Domingo</span></div>`}</div><h3>${d.n}</h3><p>${d.img?d.d:'El plato premiado de la casa.'}</p></div>`).join('')}</div></section>
+<div class="p10-rec" data-r><div><span>TripAdvisor</span><b>Travellers' Choice</b><span>2024</span></div><div><span>Festival Gastronómico</span><b>Santo Domingo</b><span>Premio 2005</span></div></div>
+<section class="p10-sec"><div class="p10-sun"><div class="pc" data-r>${im('coctel-sunset.webp','Cóctel al atardecer','im')}</div><div data-r><h2>La postal de las seis</h2><p class="hand">El sol se pone sobre la bahía y el muelle se vuelve dorado. Esta foto no le hace justicia, hay que estar aquí.</p><a class="btn b-deep" href="${SUN}">${IC}Reserva para el atardecer</a></div></div></section>
+<section class="p10-sec" id="p10-eventos"><div class="p10-sh" data-r><h2>Para celebrar</h2><span class="hand">cotiza tu fecha</span></div>
+<div class="p10-eg">${E.map(e=>`<article class="pc" data-r>${im(e.img,e.n,'im')}<h3>${e.n}</h3><p>${e.d}</p>${cot(e)}</article>`).join('')}</div></section>
+${ftr('Te esperamos en Boca Chica. '+SIMPLE,'b-coral')}${fab()}`;
+
+const CH=(k,a)=>`<div class="chips" data-k="${k}">${a.map((v,i)=>`<button data-v="${i}"${i?'':' class="on"'}>${v}</button>`).join('')}</div>`;
+const NS=['2','4','6','8 o más'],DS=['hoy','mañana','este fin de semana','otra fecha'];
+P.p11=()=>`${hdr('p11')}
+<div class="p11-hero" id="p11-zonas"><div class="p11-pic"><img class="kb" src="hero-sunset.webp" alt="El muelle de Boca Marina al atardecer"><div data-r><span class="eb" style="color:var(--sea)">Boca Chica · a 20 minutos de Santo Domingo</span><h1>Sobre el mar,<br>en Boca Chica</h1><p>${SIMPLE}</p></div></div>
+<div class="p11-chat"><div class="p11-top"><img src="${LOGO}" alt=""><div><b>Boca Marina</b><small>Reservas por WhatsApp · 809-688-6810</small></div></div>
+<div class="bub">Hola, bienvenido a Boca Marina. ¿Dónde te gustaría sentarte?</div>${CH('z',Z.map(z=>z.n))}
+<div class="bub">¿Cuántos van a ser?</div>${CH('n',NS)}
+<div class="bub">¿Qué día?</div>${CH('d',DS.map(d=>d[0].toUpperCase()+d.slice(1)))}
+<div class="bub out"><small>Tu mensaje</small><span id="p11-msg"></span></div>
+<div class="p11-send"><a class="btn" id="p11-go" href="${MAIN}">${IC}Enviar por WhatsApp</a><span>No es un formulario: abrimos WhatsApp con este mensaje escrito y tú decides si lo envías.</span></div></div></div>
+${rec()}
+<section class="p11-sec" id="p11-menu"><span class="eb">Lo que más se pide</span><h2>Te mandaríamos estas fotos</h2>
+<div class="p11-ph">${D.map(d=>`<figure data-r>${d.img?im(d.img,d.n,'im zoom'):`<div class="aw"><b>2005</b><span>Premio Festival<br>Gastronómico</span></div>`}<figcaption><b>${d.n}</b>${d.img?d.d:'Premio del Festival Gastronómico de Santo Domingo 2005.'}</figcaption></figure>`).join('')}</div></section>
+<section class="p11-sec p11-sun">${im('coctel-sunset.webp','Cóctel al atardecer','im')}<div data-r><span class="eb">La hora dorada</span><h2>¿Vienes por el atardecer?</h2><p>Dínoslo en el mensaje y te sentamos de frente al sol. El muelle se pone dorado poco después de las seis.</p><a class="btn b-sand" href="${SUN}">${IC}Reserva para el atardecer</a></div></section>
+<section class="p11-sec" id="p11-eventos"><span class="eb">Celebraciones</span><h2>Cotiza en un mensaje</h2>
+<div class="p11-ev">${E.map(e=>`<a href="${w(e.m)}" data-r>${im(e.img,e.n,'im')}<h3>${e.n}</h3><p>${e.d}</p><span class="lnk">Cotizar por WhatsApp</span></a>`).join('')}</div></section>
+${ftr(SIMPLE,'b-sand')}${fab()}`;
+
+const META=[
+ ['p1','Cine','Editorial cinematográfico','La portada es una toma de cine: el muelle al atardecer a pantalla completa con un acercamiento lento, el título encima y casi nada más. El resto se lee por capítulos.','Mirazur (Menton), Eleven Madison Park, portadas de estudios de cine.','Vende la emoción del lugar en los primeros tres segundos. Las zonas son una tira de fotogramas que se desliza y el plato premiado tiene su propia escena.'],
+ ['p2','Tu lugar','Elige tu lugar primero','La decisión principal sube al primer pantallazo: eliges dónde sentarte y el botón ya lleva ese lugar en el mensaje de WhatsApp. Debajo, un mapa aéreo del muelle con un punto por zona.','Scorpios (Mykonos), Nikki Beach, Soho House.','La más pensada para convertir: la reserva está a dos toques y el mapa explica el lugar mejor que cualquier texto.'],
+ ['p3','Tipográfico','Minimal tipográfico','Letra grande, mucho aire y listas numeradas. Casi sin fotos: aparecen solo al pasar el cursor sobre cada lugar o celebración.','Central (Lima), Noma, estudios de diseño suizos.','La más sobria y rápida de cargar. Transmite alta cocina y deja que los nombres de los platos hagan el trabajo.'],
+ ['p4','Revista','Revista de viaje','La portada es una revista: cabecera, titulares de portada, índice, crónica con letra capitular, cita destacada y fotos con pie.','Condé Nast Traveler, Kinfolk, Cereal.','Cuenta historias (el atardecer minuto a minuto, dónde sentarse) y deja material listo para redes y prensa.'],
+ ['p5','Nocturno','Nocturno lujoso','Fondo casi negro, líneas finas en coral dorado y un encabezado donde el atardecer se funde lentamente con la noche.','Zuma, Nobu Malibu, Gekko.','Posiciona a Boca Marina como lounge de noche y destino para celebrar. La más exclusiva de todas.'],
+ ['p6','Mediterráneo','Mediterráneo luminoso','Blanco, arena y azul mar, con las fotos enmarcadas en arcos como una casa de las islas griegas y una tipografía alta y fina.','Nammos (Mykonos), Cap Juluca, Belmond.','La más luminosa y de día: ideal para vender almuerzos largos y bodas.'],
+ ['p7','Carta','Carta de la casa','La página es una carta escrita por la casa: en primera persona, con recomendaciones como las daría un amigo, fotos pegadas en el margen y firma al final.','Noma, Chez Panisse, cartas de bienvenida de hoteles boutique.','La más cálida y humana. Los lugares son enlaces dentro del texto, cada uno con su mensaje de WhatsApp.'],
+ ['p8','Un día','Un día en Boca Marina','Un recorrido de mediodía a noche: el fondo y el reloj lateral cambian de color con el scroll, y cada hora propone sus lugares y sus platos.','Páginas de producto de Apple, Amangiri, Six Senses.','Demuestra que Boca Marina sirve todo el día, no solo para cenar, y ordena las zonas por momento.'],
+ ['p9','Dividido','Pantalla dividida','La foto queda fija a la izquierda y cambia según lo que lees a la derecha; al pasar sobre cada lugar se ve su foto.','Aesop, Le Sirenuse (Positano), Hotel Esencia.','Navegación muy clara, se siente como una galería. En el celular se vuelve una columna con una foto por bloque.'],
+ ['p10','Postal','Postal caribeña refinada','Tarjetas con borde blanco, sellos perforados, matasellos y un mapa dibujado de Santo Domingo a Boca Chica.','Il Pellicano, Rosewood Little Dix Bay, la estética de Wes Anderson.','Tiene personalidad propia y se recuerda. El mapa resuelve el "a 20 minutos" de un vistazo.'],
+ ['p11','Conversación','Reserva conversacional (extra)','La portada es un chat: tocas lugar, personas y día, y el mensaje de WhatsApp se arma solo. El resto de la página sigue el tono de una conversación.','Interfaces de mensajería, conserjes de hotel por chat, Resy.','La más directa al objetivo. No es un formulario: la web no envía nada, solo deja el mensaje escrito en WhatsApp.']];
+
+document.getElementById('tabs').innerHTML=META.map(m=>`<a href="#i-${m[0]}" data-t="${m[0]}"><i>${m[0].toUpperCase()}</i>${m[1]}</a>`).join('');
+document.getElementById('root').innerHTML=META.map(m=>`<div class="intro" id="i-${m[0]}"><div class="intro-n">${m[0].toUpperCase()}</div><div><h2>${m[2]}</h2><dl><dt>Concepto</dt><dd>${m[3]}</dd><dt>Referencias</dt><dd>${m[4]}</dd><dt>Lo distinto</dt><dd>${m[5]}</dd></dl></div></div><section class="mock ${m[0]}" id="${m[0]}">${P[m[0]]()}</section>`).join('');
+
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('[data-r]').forEach(el=>rm?el.classList.add('in'):io.observe(el));
+const mid=(els,fn)=>{const o=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&fn(e.target)),{rootMargin:'-45% 0px -50% 0px'});els.forEach(el=>o.observe(el))};
+const tabs=[...document.querySelectorAll('#tabs a')];
+mid(document.querySelectorAll('.mock,.intro'),el=>{const id=el.id.replace('i-','');tabs.forEach(t=>{const on=t.dataset.t===id;t.classList.toggle('on',on);if(on)t.scrollIntoView({block:'nearest',inline:'nearest'})})});
+
+const p2=i=>{const z=Z[i];document.querySelectorAll('.p2 [data-p2]').forEach(b=>b.classList.toggle('on',+b.dataset.p2===i));const img=document.getElementById('p2-img');img.src=z.img;img.alt=z.n;document.getElementById('p2-d').textContent=z.d;document.getElementById('p2-go').href=w(z.m);document.getElementById('p2-gl').textContent='Reservar '+z.ph};
+document.querySelectorAll('.p2 [data-p2]').forEach(b=>b.addEventListener('click',()=>p2(+b.dataset.p2)));
+
+const day=document.getElementById('p8-day'),dots=[...day.querySelectorAll('.p8-clock li')],secs=[...day.querySelectorAll('.p8-c')];
+mid(secs,s=>{day.className='p8-day '+s.dataset.c;document.getElementById('p8-h').textContent=s.dataset.h;document.getElementById('p8-l').textContent=s.dataset.l;dots.forEach((d,i)=>d.classList.toggle('on',secs[i]===s))});
+
+const p9i=[...document.querySelectorAll('.p9-imgs img')],cap=document.getElementById('p9-cap'),idx=document.getElementById('p9-idx');
+const p9show=img=>{p9i.forEach(x=>x.classList.toggle('on',x===img));cap.textContent=img.alt};
+let p9k=0;
+mid(document.querySelectorAll('.p9-pn'),pn=>{p9k=+pn.dataset.k;p9show(p9i[p9k]);idx.textContent=n2(p9k)+' / 06'});
+document.querySelectorAll('.p9-zl a').forEach(a=>{a.addEventListener('mouseenter',()=>p9show(document.querySelector(`.p9-imgs img[data-z="${a.dataset.z}"]`)));a.addEventListener('mouseleave',()=>p9show(p9i[p9k]))});
+
+const st={z:0,n:0,d:0};
+const p11=()=>{const z=Z[st.z],d=DS[st.d],n=NS[st.n];const msg=`Hola, quiero reservar ${z.ph} para ${n} personas ${d==='otra fecha'?'el __':d}. ¿Tienen disponibilidad?`;document.getElementById('p11-msg').textContent=msg;document.getElementById('p11-go').href=w(msg)};
+document.querySelectorAll('.p11 .chips').forEach(c=>c.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;c.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));st[c.dataset.k]=+b.dataset.v;p11()}));
+p11();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "nombre": "MAX",
+  "subtitulo": "Corredores de Seguros",
+  "color": "#0047BB",
+  "acento": "#6691D6",
+  "logo": "/marca/logo-max.png",
+  "logoConNombre": true,
+  "modo": "claro",
+  "esquinas": "suaves",
+  "fuentes": { "titulo": "spartan", "texto": "roboto" },
+  "superficies": {
+    "claro": { "fondo": "#F2F6FC", "tarjeta": "#FFFFFF", "suave": "#E9F1FF", "borde": "#DCE5F3", "campo": "#C9D6EA", "chat": "#E8EFF9", "texto": "#0B1B3D", "tenue": "#5A6A86" },
+    "oscuro": { "fondo": "#06122A", "tarjeta": "#0B1C3D", "suave": "#122653", "borde": "#1B3263", "campo": "#25407A", "chat": "#050F24", "texto": "#EAF1FF", "tenue": "#9DB0D3" }
+  }
+}

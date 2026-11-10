@@ -1,0 +1,42 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+ast_logs.txt
+tcpdump.log
+
+# env files
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+# Copia generada de frontend/assets/colt (ver frontend/scripts/sync-colt-assets.mjs)
+/public/colt
+/public/boca-marina
+/public/max
+!.env.example
+# Copia generada de frontend/marca (ver frontend/scripts/sync-colt-assets.mjs)
+/public/marca
+# Copia generada de frontend/tema (ver frontend/scripts/sync-colt-assets.mjs)
+/tema
+
+# Playwright
+/test-results
+/playwright-report

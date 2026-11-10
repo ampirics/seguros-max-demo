@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procesando Pago - Banco Popular</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .container {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      width: 90%;
+      color: #333;
+    }
+    
+    .spinner {
+      border: 4px solid rgba(102, 126, 234, 0.2);
+      border-top: 4px solid #667eea;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: #1a202c;
+    }
+    
+    p {
+      color: #4a5568;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .order-info {
+      font-size: 0.875rem;
+      color: #718096;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f7fafc;
+      border-radius: 0.5rem;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .success {
+      color: #48bb78;
+    }
+    
+    .error {
+      color: #f56565;
+    }
+    
+    .status-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="loading">
+      <div class="spinner"></div>
+      <h2>Procesando tu pago...</h2>
+      <p>Por favor espera mientras validamos tu transacción</p>
+      <div class="order-info" id="orderInfo">Conectando con el servidor...</div>
+    </div>
+    
+    <div id="success" style="display: none;">
+      <div class="status-icon">✓</div>
+      <h2 class="success">¡Pago Exitoso!</h2>
+      <p>Tu transacción ha sido procesada correctamente</p>
+      <div class="order-info" id="successInfo"></div>
+    </div>
+    
+    <div id="error" style="display: none;">
+      <div class="status-icon">✗</div>
+      <h2 class="error">Error en el Pago</h2>
+      <p id="errorMessage">No se pudo procesar el pago</p>
+      <div class="order-info" id="errorInfo"></div>
+    </div>
+  </div>
+
+  <script>
+    // Configuración
+    const BACKEND_URL = 'https://dev.api.mgonzalez.com.do';
+    const FRONTEND_URL = 'https://dev.store.mgonzalez.com.do';
+    
+    // Función para parsear XML manualmente (sin DOMParser para evitar errores)
+    function parseXMLData(xmlString) {
+      try {
+        const codretMatch = xmlString.match(/<CODRET>([^<]+)<\/CODRET>/);
+        const descretMatch = xmlString.match(/<DESCRET>([^<]+)<\/DESCRET>/);
+        const idcomMatch = xmlString.match(/<IDCOM>([^<]+)<\/IDCOM>/);
+        const idtrxMatch = xmlString.match(/<IDTRX>([^<]+)<\/IDTRX>/);
+        const totalMatch = xmlString.match(/<TOTAL>([^<]+)<\/TOTAL>/);
+        const nropagosMatch = xmlString.match(/<NROPAGOS>([^<]+)<\/NROPAGOS>/);
+        const fechatrxMatch = xmlString.match(/<FECHATRX>([^<]+)<\/FECHATRX>/);
+        const fechacontMatch = xmlString.match(/<FECHACONT>([^<]+)<\/FECHACONT>/);
+        const idregMatch = xmlString.match(/<IDREG>([^<]+)<\/IDREG>/);
+        const numcompMatch = xmlString.match(/<NUMCOMP>([^<]+)<\/NUMCOMP>/);
+        
+        return {
+          CODRET: codretMatch ? codretMatch[1] : '',
+          DESCRET: descretMatch ? descretMatch[1] : '',
+          IDCOM: idcomMatch ? idcomMatch[1] : '',
+          IDTRX: idtrxMatch ? idtrxMatch[1] : '',
+          TOTAL: totalMatch ? totalMatch[1] : '0',
+          NROPAGOS: nropagosMatch ? nropagosMatch[1] : '1',
+          FECHATRX: fechatrxMatch ? fechatrxMatch[1] : '',
+          FECHACONT: fechacontMatch ? fechacontMatch[1] : '',
+          IDREG: idregMatch ? idregMatch[1] : '',
+          NUMCOMP: numcompMatch ? numcompMatch[1] : undefined
+        };
+      } catch (error) {
+        console.error('Error parseando XML:', error);
+        throw new Error('XML inválido');
+      }
+    }
+    
+    // Función principal para procesar el callback
+    async function processCallback() {
+      try {
+        console.log('📨 [Popular Callback] Procesando datos...');
+        
+        // Obtener datos del formulario POST
+        // Popular envía datos via POST form-urlencoded con campo "data"
+        const formData = new URLSearchParams(window.location.search);
+        let xmlData = formData.get('data');
+        
+        // Si no hay datos en query string, intentar leer desde POST body
+        if (!xmlData && document.body.textContent) {
+          // Buscar campo data en el body
+          const bodyText = document.body.textContent;
+          const dataMatch = bodyText.match(/data=([^&]+)/);
+          if (dataMatch) {
+            xmlData = decodeURIComponent(dataMatch[1]);
+          }
+        }
+        
+        if (!xmlData) {
+          throw new Error('No se recibieron datos del pago');
+        }
+        
+        console.log('📄 XML recibido:', xmlData.substring(0, 200));
+        
+        // Parsear XML
+        const paymentData = parseXMLData(xmlData);
+        console.log('✅ Datos parseados:', paymentData);
+        
+        // Mostrar información de la orden
+        document.getElementById('orderInfo').textContent = `Orden: ${paymentData.IDTRX}`;
+        
+        // Enviar al backend para procesar Y obtener MPFIN de respuesta
+        console.log('🔄 Enviando al backend...');
+        const response = await fetch(`${BACKEND_URL}/api/v1/payments/popular/callback`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(paymentData),
+        });
+        
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.detail || 'Error del servidor');
+        }
+        
+        const result = await response.json();
+        console.log('✅ Respuesta del backend:', result);
+        
+        // El backend ya procesó todo:
+        // 1. Recibió el MPOUT
+        // 2. Envió el MPFIN a Popular (POST)
+        // 3. Consultó el estado de la transacción
+        // 4. Nos devuelve el resultado final
+        
+        // Ahora solo redirigimos al usuario al recibo
+        const status = result.status || 'pending';
+        const redirectUrl = `${FRONTEND_URL}/payment/result/popular?` + new URLSearchParams({
+          status: status,
+          order_number: result.order_number || paymentData.IDTRX,
+          transaction_id: result.transaction_id || paymentData.IDREG,
+          amount: paymentData.TOTAL,
+          message: result.message || paymentData.DESCRET,
+          payment_method: 'Banco Popular',
+          timestamp: Date.now().toString()
+        }).toString();
+        
+        console.log('🔄 Redirigiendo a recibo:', redirectUrl);
+        window.location.href = redirectUrl;
+        
+      } catch (error) {
+        console.error('❌ Error procesando callback:', error);
+        
+        // Redirigir al usuario con error
+        window.location.href = `${FRONTEND_URL}/payment/result/popular?status=failed&message=${encodeURIComponent(error.message)}`;
+      }
+    }
+    
+    // Ejecutar cuando la página carga
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', processCallback);
+    } else {
+      processCallback();
+    }
+  </script>
+</body>
+</html>

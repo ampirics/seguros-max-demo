@@ -1,0 +1,8 @@
+{
+  "nombre": "Repuestos La Casa del Colt",
+  "color": "#E8141C",
+  "logo": "/marca/logo.svg",
+  "logoOscuro": "/marca/logo-oscuro.svg",
+  "modo": "claro",
+  "esquinas": "rectas"
+}

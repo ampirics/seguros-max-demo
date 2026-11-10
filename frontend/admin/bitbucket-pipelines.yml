@@ -1,0 +1,117 @@
+# Bitbucket Pipelines Configuration
+image: node:18
+
+pipelines:
+  default:
+    - step:
+        name: Test & Build
+        services:
+          - docker
+        caches:
+          - node
+        script:
+          - echo "Installing dependencies..."
+          - npm install
+          - echo "Running tests..."
+          - npm run lint
+          - echo "Building application..."
+          - npm run build
+          - echo "Creating deployment package..."
+          - zip -r frontend-deployment.zip .next package.json package-lock.json public next.config.mjs
+        artifacts:
+          - frontend-deployment.zip
+        after-script:
+          - echo "Build completed"
+
+  branches:
+    develop:
+      - step:
+          name: Deploy to Development
+          deployment: development
+          services:
+            - docker
+          caches:
+            - node
+          script:
+            - echo "Installing dependencies..."
+            - npm install
+            - echo "Building for development..."
+            - npm run build
+            - echo "Creating deployment package..."
+            - zip -r frontend-deployment.zip .next package.json package-lock.json public next.config.mjs
+            - echo "Uploading to S3..."
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $S3_DEPLOYMENT_BUCKET_DEV
+                LOCAL_PATH: 'frontend-deployment.zip'
+                S3_PATH: 'frontend-deployment.zip'
+            - echo "Deploying to Elastic Beanstalk..."
+            - pipe: atlassian/aws-elasticbeanstalk-deploy:1.0.2
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                APPLICATION_NAME: $EB_APPLICATION_NAME_DEV
+                ENVIRONMENT_NAME: $EB_ENVIRONMENT_NAME_DEV
+                ZIP_FILE: 'frontend-deployment.zip'
+                S3_BUCKET: $S3_DEPLOYMENT_BUCKET_DEV
+                VERSION_LABEL: 'frontend-${BITBUCKET_BUILD_NUMBER}'
+
+    main:
+      - step:
+          name: Deploy to Production
+          deployment: production
+          trigger: manual
+          services:
+            - docker
+          caches:
+            - node
+          script:
+            - echo "Installing dependencies..."
+            - npm install
+            - echo "Building for production..."
+            - export NODE_ENV=production
+            - npm run build
+            - echo "Creating deployment package..."
+            - zip -r frontend-deployment.zip .next package.json package-lock.json public next.config.mjs
+            - echo "Uploading to S3..."
+            - pipe: atlassian/aws-s3-deploy:1.1.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                S3_BUCKET: $S3_DEPLOYMENT_BUCKET_PROD
+                LOCAL_PATH: 'frontend-deployment.zip'
+                S3_PATH: 'frontend-deployment.zip'
+            - echo "Deploying to Elastic Beanstalk..."
+            - pipe: atlassian/aws-elasticbeanstalk-deploy:1.0.2
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                APPLICATION_NAME: $EB_APPLICATION_NAME_PROD
+                ENVIRONMENT_NAME: $EB_ENVIRONMENT_NAME_PROD
+                ZIP_FILE: 'frontend-deployment.zip'
+                S3_BUCKET: $S3_DEPLOYMENT_BUCKET_PROD
+                VERSION_LABEL: 'frontend-${BITBUCKET_BUILD_NUMBER}'
+          after-script:
+            - echo "Production deployment completed"
+
+definitions:
+  services:
+    docker:
+      memory: 2048
+
+# Variables de repositorio que debes configurar en Bitbucket:
+# AWS_ACCESS_KEY_ID
+# AWS_SECRET_ACCESS_KEY
+# AWS_DEFAULT_REGION
+# S3_DEPLOYMENT_BUCKET_DEV
+# S3_DEPLOYMENT_BUCKET_PROD
+# EB_APPLICATION_NAME_DEV
+# EB_APPLICATION_NAME_PROD
+# EB_ENVIRONMENT_NAME_DEV
+# EB_ENVIRONMENT_NAME_PROD
