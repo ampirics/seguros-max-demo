@@ -204,7 +204,7 @@ export function bienDe(ramo: Ramo, f: Record<string, unknown>) {
 export function cotizacionesDe(az: Azar, ramo: Ramo, base: number): CotizacionAseguradora[] {
   const opciones = ASEGURADORAS.filter((a) => a.ramos.includes(ramo))
   const tomadas = opciones.slice().sort(() => az.sig() - 0.5).slice(0, Math.min(3, opciones.length))
-  const lista = tomadas.map((a) => {
+  const lista: CotizacionAseguradora[] = tomadas.map((a) => {
     const prima = redondear(base * az.entre(0.86, 1.18))
     const cob = COBERTURAS[ramo]
     return {

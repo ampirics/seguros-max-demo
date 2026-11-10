@@ -16,6 +16,9 @@ ENV="$APP/.env.local"
 [ -f "$ENV" ] || error "falta $ENV (el archivo que pasa Cristian; ver README)"
 grep -q '^ANTHROPIC_API_KEY=..' "$ENV" || error "falta ANTHROPIC_API_KEY en $ENV: sin ella la IA no responde"
 grep -q '^NEXT_PUBLIC_MOCK=1' "$ENV" || error "falta NEXT_PUBLIC_MOCK=1 en $ENV"
+if ! grep -q '^VOZ_SECRETO=..' "$ENV"; then
+  printf '\nVOZ_SECRETO=%s\n' "$(node -e 'console.log(require("crypto").randomBytes(24).toString("hex"))')" >> "$ENV"
+fi
 grep -q '^NEXT_PUBLIC_VERTICAL=' "$ENV" && ! grep -q '^NEXT_PUBLIC_VERTICAL=seguros' "$ENV" \
   && error "NEXT_PUBLIC_VERTICAL en $ENV tiene que ser seguros o no estar"
 

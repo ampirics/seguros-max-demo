@@ -51,6 +51,7 @@ Para volver a otra vertical: Configuración > Tipo de negocio, o `NEXT_PUBLIC_VE
 | Ficha del siniestro | `/admin/siniestros/[id]` | Documentos con casillas, pasos oficiales de MAX, número de reclamo y estado; el asegurado recibe cada cambio por WhatsApp. |
 | Asegurados | `/admin/asegurados` | Personas y empresas, asegurados y prospectos. Ficha 360 con pólizas, solicitudes, siniestros, recorrido y venta cruzada. |
 | Indicadores | `/admin/indicadores` | Los indicadores del punto 10 de la propuesta: primera respuesta, calificación, conversión a cotización y a póliza, contención, fuera de horario, siniestros; antes y con ORA; por mes, canal, ramo y ejecutivo; motivos de pérdida. |
+| Llamadas | +1 754 714 5308 | El asistente de voz de MAX atiende por teléfono con las mismas reglas y herramientas que WhatsApp; cada llamada entra a la bandeja como Llamada, con lo que hizo y el resumen. |
 | Simulador | `/simulador` | Escenarios de captación, siniestro y servicio, y escribir como un asegurado real de la cartera de ejemplo (con los últimos 4 de su cédula para verificar). |
 
 ## Cómo funciona
@@ -70,6 +71,26 @@ Para volver a otra vertical: Configuración > Tipo de negocio, o `NEXT_PUBLIC_VE
   - Todo pase lleva motivo y un resumen armado desde el estado, sin LLM; la frase de espera depende del horario y no promete minutos.
   - Trato de usted; pasa a tú si el cliente tutea. Si preguntan, dice que es el asistente digital de MAX.
 - **Bandeja de ORA sin cambios de fondo:** `mocks/seguros.ts` traduce las rutas del chat al servidor de MAX.
+
+## Llamadas
+
+Agente "MAX Seguros" en ElevenLabs (voz de Boca Marina, Claude Haiku 4.5). Sus herramientas son las mismas de la IA de
+WhatsApp (`servidor/voz.ts`) y llaman al panel por un túnel de Cloudflare con la clave `VOZ_SECRETO` en `X-Ora-Voz`.
+El prompt y las herramientas salen del panel (`GET /srv/seguros/voz/esquema`): `frontend/scripts/voz-max.mjs` los sube.
+
+```bash
+./activar-llamadas.sh     # con la demo corriendo; abre el túnel, actualiza el agente y le asigna el número
+```
+
+`.env.local` necesita `ELEVENLABS_API_KEY` y `VOZ_SECRETO` (el script de preparación lo genera). El túnel cambia de
+dirección en cada arranque: si se reinicia la demo o el túnel, se vuelve a correr. El número es el mismo de Colt y Boca
+Marina: al activarlo para MAX deja de atender a Boca Marina.
+
+- Quien llama se identifica por su número. Si llama desde otro, dice con qué número está registrado y verifica igual
+  con los últimos 4 de la cédula.
+- Para reportar un siniestro no pide verificación; para dar datos de pólizas, sí.
+- Probado con simulaciones de ElevenLabs contra el túnel: cotización de punta a punta, siniestro desde un número no
+  registrado y verificación con dígitos equivocados y correctos.
 
 ## Datos
 
@@ -92,6 +113,7 @@ Para volver a otra vertical: Configuración > Tipo de negocio, o `NEXT_PUBLIC_VE
 ## Pendiente
 
 - Revisión visual de las pantallas en el navegador antes de la reunión.
-- WhatsApp real de MAX (Meta) en lugar del simulador y agente de voz (fase posterior en la propuesta).
+- WhatsApp real de MAX (Meta) en lugar del simulador.
+- Número dominicano propio para MAX y transferencia de la llamada a un ejecutivo en horario.
 - Integración con el cotizador (`services.max.com.do/Cotizador`) y su CRM: según lo que diga MAX en la reunión.
 - Pasar el servidor de MAX al backend (Roylin) siguiendo el contrato.

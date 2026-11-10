@@ -33,6 +33,7 @@ Si no lo tienes, crea ese archivo con estas tres líneas:
 ```
 ANTHROPIC_API_KEY=...   # obligatoria: sin ella la IA no responde
 GROQ_API_KEY=...        # opcional: transcribe las notas de voz del simulador
+ELEVENLABS_API_KEY=...  # opcional: solo para las llamadas
 NEXT_PUBLIC_MOCK=1      # obligatoria: modo demo, sin backend
 ```
 
@@ -70,6 +71,24 @@ npx next dev -p 3300
 El guion de la reunión, paso a paso y con qué escribir en cada momento, está en [docs/max/guion-demo.md](docs/max/guion-demo.md).
 El detalle de qué hace cada pantalla y cómo funciona por dentro, en [docs/max/README.md](docs/max/README.md).
 
+## Llamadas (asistente de voz)
+
+El asistente de MAX también atiende por teléfono en el **+1 754 714 5308**, con las mismas reglas que WhatsApp, y cada
+llamada aparece en la bandeja del panel como Llamada. Con la demo ya corriendo, en **otra ventana** de la Terminal:
+
+```bash
+./activar-llamadas.sh
+```
+
+Abre un túnel de Cloudflare (instala `cloudflared` con Homebrew si falta), actualiza el agente "MAX Seguros" en
+ElevenLabs con la dirección del túnel, le asigna el número y prueba que responda. Cuando dice `LLAMADAS LISTAS`, ya se
+puede llamar. Deja esa ventana abierta.
+
+- Si se reinicia la demo o se cierra esa ventana, vuelve a correr `./activar-llamadas.sh`: el túnel cambia de dirección.
+- El número es compartido con otras demos de Ampirics: queda atendiendo como MAX hasta que otra demo lo reclame.
+- Para probar como asegurado desde tu celular: di que estás registrado con el número de un asegurado del simulador
+  (botón "Escribir como un asegurado de la cartera") y da los últimos 4 de su cédula.
+
 ## Antes de la reunión
 
 1. `./preparar-demo.sh` y esperar `LISTO`.
@@ -86,6 +105,8 @@ El detalle de qué hace cada pantalla y cómo funciona por dentro, en [docs/max/
 | `npm ci` falla con ERESOLVE | Usar `npm ci --legacy-peer-deps` (el script ya lo hace). |
 | Puerto 3300 ocupado | `lsof -ti:3300 \| xargs kill` o arrancar con `PUERTO=3400 ./preparar-demo.sh`. |
 | Se ven datos raros por las pruebas | Reiniciar con el `curl`. |
+| El número no contesta o dice que no está disponible | Volver a correr `./activar-llamadas.sh` con la demo arriba. |
+| `activar-llamadas.sh` dice que falta `ELEVENLABS_API_KEY` | Agregarla a `frontend/admin/.env.local` (la pasa Cristian). |
 | Sale la marca de otro cliente | Falta `NEXT_PUBLIC_MOCK=1` o hay un `NEXT_PUBLIC_VERTICAL` distinto de `seguros`. |
 
 ## Qué es real y qué es de ejemplo

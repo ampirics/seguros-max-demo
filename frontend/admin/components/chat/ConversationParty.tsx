@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-import { AlertTriangle, Globe, Instagram, Mail, MessageCircle, PhoneOff, Send } from "lucide-react"
+import { AlertTriangle, Globe, Instagram, Mail, MessageCircle, Phone, PhoneOff, Send } from "lucide-react"
 
 /**
  * Quién escribe en una conversación.
@@ -19,6 +19,9 @@ const CANALES: Record<string, { icono: typeof MessageCircle; etiqueta: string; c
   instagram: { icono: Instagram, etiqueta: "Instagram", clase: "text-muted-foreground" },
   messenger: { icono: Send, etiqueta: "Messenger", clase: "text-blue-600" },
   email: { icono: Mail, etiqueta: "Correo", clase: "text-gray-600" },
+  correo: { icono: Mail, etiqueta: "Correo", clase: "text-gray-600" },
+  telefono: { icono: Phone, etiqueta: "Llamada", clase: "text-primary" },
+  voz: { icono: Phone, etiqueta: "Llamada", clase: "text-primary" },
   web: { icono: Globe, etiqueta: "Web", clase: "text-gray-600" },
 }
 

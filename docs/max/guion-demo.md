@@ -52,6 +52,12 @@ Con el mismo asegurado, "¿Mi póliza está al día?": pide los últimos 4 de la
 número equivocado no da nada. Luego "¿Me cubre si choco en Puerto Rico?": no interpreta el contrato, lo pasa al equipo con el
 motivo y el resumen.
 
+## 6b. La llamada (1 min 30 s)
+
+Con `./activar-llamadas.sh` corriendo, llamar al +1 754 714 5308 en altavoz: "Quiero asegurar mi Toyota RAV4 2023".
+Contesta el asistente de MAX, no da precio, pregunta lo que falta, pide la autorización y asigna al ejecutivo. En la
+laptop la llamada aparece en la bandeja como Llamada con cada paso y el resumen.
+
 ## 7. Cartera y renovaciones (1 min)
 
 `/admin/cartera`: lo que vence en 15, 30 y 60 días con su prima. Seleccionar las que no tienen aviso y "Enviar aviso de
@@ -66,6 +72,8 @@ Cierre: "Proponemos un piloto de 4 a 8 semanas con uno o dos ramos, medir y deci
 propuesta, sección 11: CRM y cotizador que usan, volúmenes por canal, qué operaciones exigen validación humana.
 
 ## Si algo falla
+
+- El número no contesta o dice que no está disponible: volver a correr `./activar-llamadas.sh` (el túnel se cerró o cambió).
 
 - La IA no responde: falta `ANTHROPIC_API_KEY` o no hay internet. La conversación pasa sola a servicio con el aviso; seguir
   con las conversaciones sembradas de la bandeja, que muestran los mismos escenarios.

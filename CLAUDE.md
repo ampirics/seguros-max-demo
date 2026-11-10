@@ -27,8 +27,14 @@ servidor de MAX dentro del propio panel (`frontend/admin/lib/seguros/servidor/`,
    curl -s -X POST http://localhost:3300/srv/seguros/accion -H 'Content-Type: application/json' -d '{"tipo":"reiniciar"}'
    ```
 
-6. Dile a la persona, corto: el panel en http://localhost:3300/admin/login (botón Dirección), el simulador en
-   http://localhost:3300/simulador, y que el guion está en `docs/max/guion-demo.md`. Deja el servidor corriendo.
+6. Llamadas: si `.env.local` tiene `ELEVENLABS_API_KEY`, corre `./activar-llamadas.sh` **en segundo plano** y espera
+   `LLAMADAS LISTAS` (o `ERROR:`). Abre un túnel de Cloudflare, actualiza el agente de voz y le asigna el número
+   +1 754 714 5308. Si falta `cloudflared` y no hay Homebrew, explícale a la persona cómo instalarlo. Si no hay llave de
+   ElevenLabs, sáltate este paso y díselo.
+7. Dile a la persona, corto: el panel en http://localhost:3300/admin/login (botón Dirección), el simulador en
+   http://localhost:3300/simulador, el número para llamar (+1 754 714 5308) si se activó, y que el guion está en
+   `docs/max/guion-demo.md`. Deja el servidor y el túnel corriendo. Si la persona reinicia algo, vuelve a correr
+   `./activar-llamadas.sh`.
 
 ## Reglas
 

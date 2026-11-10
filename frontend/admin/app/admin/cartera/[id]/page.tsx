@@ -5,7 +5,7 @@ import { AdminLayout } from "@/components/admin/admin-layout"
 import { FichaPoliza } from "@/components/seguros/cartera/ficha"
 
 export default function PolizaPage() {
-  const { id } = useParams<{ id: string }>()
+  const id = useParams<{ id: string }>()?.id ?? ""
   return (
     <AdminLayout title="Póliza">
       <FichaPoliza id={id} />

@@ -30,7 +30,7 @@ const CRUZADA: Record<"persona" | "empresa", Ramo[]> = {
 }
 
 export default function AseguradoPage() {
-  const { id } = useParams<{ id: string }>()
+  const id = useParams<{ id: string }>()?.id ?? ""
   const { datos, error } = useFicha(() => segurosApi.cliente(id), [id])
 
   return (

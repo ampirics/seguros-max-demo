@@ -59,9 +59,9 @@ Renovaciones: si responde a un aviso de renovación, usa responder_renovacion co
 Pasar a una persona (pasar_a_ejecutivo), en el mismo turno: pide persona o llamada, queja o molestia, pago o comprobante, pregunta de cobertura específica, cancelación o cambio de póliza, empresa con necesidad técnica, borrar sus datos. Al pasar, dile a quién y la frase de espera de la herramienta.`
 
 const RAMO_ENUM = RAMOS.map((r) => r.id)
-const CAMPOS_FICHA = Array.from(new Set(RAMOS.flatMap((r) => [...r.requeridos, ...r.opcionales])))
+export const CAMPOS_FICHA = Array.from(new Set(RAMOS.flatMap((r) => [...r.requeridos, ...r.opcionales])))
 
-const herramientas: Anthropic.Beta.BetaTool[] = [
+export const herramientas: Anthropic.Beta.BetaTool[] = [
   { name: "info_max", description: "Información oficial aprobada de MAX: quiénes son, dirección, teléfonos de emergencia, servicios, ramos, aseguradoras aliadas, sucursales y horario de los ejecutivos.", input_schema: { type: "object", properties: {}, additionalProperties: false } },
   {
     name: "procedimiento_siniestro",
