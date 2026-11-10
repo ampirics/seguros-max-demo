@@ -42,9 +42,8 @@ done
 node "$RAIZ/frontend/scripts/voz-max.mjs" "$URL" --telefono
 
 SECRETO="$(grep -E '^VOZ_SECRETO=' "$ENV" | cut -d= -f2-)"
-PRUEBA="$(curl -s --max-time 30 -X POST "$URL/srv/seguros/voz/info_max" -H 'Content-Type: application/json' -H "X-Ora-Voz: $SECRETO" \
-  -d '{"telefono_llamada":"+18095550000","llamada_id":"prueba-activacion"}')"
-echo "$PRUEBA" | grep -q 'Corredores' || error "las herramientas no responden por el túnel: $PRUEBA"
+PRUEBA="$(curl -s --max-time 30 "$URL/srv/seguros/voz/esquema" -H "X-Ora-Voz: $SECRETO")"
+echo "$PRUEBA" | grep -q 'resumen_llamada' || error "las herramientas no responden por el túnel: ${PRUEBA:0:200}"
 
 NUMERO="$(grep -E '^VOZ_NUMERO=' "$ENV" | cut -d= -f2- || true)"
 cat <<FIN
